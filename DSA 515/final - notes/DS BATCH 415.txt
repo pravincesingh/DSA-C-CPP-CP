@@ -1,0 +1,5403 @@
+Rules of writing algorithms:
+
+1)All variables used must be in capital letters.
+2)Read word is used before taking input.
+3)Write word is used before displaying output.
+4)Set word is used before assignment expression.
+5)full stop (.) is used as line termination
+6)Exit word is used to stop the algorithm.
+7)Return/ Return value  is used to transfer the control to 
+other algo.
+8) 
+
+9)[comments are inserted in between square brackets]
+
+
+Basic algorithms writing:
+
+1) Write an algorithm to find sum of 3 numbers.
+
+    Sum_Finder_Three_Numbers(A,B,C,S)
+   1)Read A,B,C.
+   2)Set S:=A+B+C.
+   3)Write S.
+   4)Exit.
+
+
+2) Write an algorithm to find simple interest.
+
+   Simple_Interest_Finder(P,R,T,SI)
+  1)Read P,R,T.
+  2)Set SI:=P*R*T/100.
+  3)Write SI.
+  4)Exit.
+
+
+Algorithms for conditional(selection) statements:
+
+1) only if statement:
+ 
+  Syntax in C/C++:
+  
+if(condition)
+{
+---------
+}          
+ 
+   Syntax in algo:
+ 
+  stepno)If condition,then:
+           -----------.
+           -----------.
+         [End of If structure(format)].
+Write an algo to convert lowercase into uppercase only if
+entered character is in lowercase.
+
+   Uppercase_Converter(CH)
+   1)Read CH.
+   2)If CH>=97 && CH<=122,then:
+      Set CH:=CH-32.
+     [End of If structure].
+   3)Exit.
+
+
+
+2) if -else statement:
+  syntax in C/C++:
+if(condition)
+{
+-------
+}
+else
+{
+-------
+}
+ 
+  syntax in algo:
+ 
+stepno.) If condition ,then:
+           -----------.
+           -----------.
+         Else:
+           -----------.
+           -----------.
+         [End of If structure].
+
+  
+Write an algo to find whether an entered number is even or odd.
+
+  Even_Odd_Finder(NUM)
+  1)Read NUM.
+  2)If NUM%2=0,then:
+     Write "Even number".
+    Else:
+     Write "Odd number".
+    [End of If structure].
+  3)Exit.
+
+Write an algo to find Maximum out of 2 numbers.
+ 
+   Largest_Finder(A,B,MAX)
+   1)Read A,B.
+   2)If A>B,then: 
+      Set MAX:=A.
+     Else:
+      Set MAX:=B.
+    [End of If structure].
+   3)Write MAX.
+   4)Exit.
+
+3) Nested If-else:
+ 
+ syntax  in c/c++:
+if(condition)
+{
+  if(condition)
+  {
+   -------------
+  }
+  else
+  {
+   ------------ 
+  }
+}
+else
+{
+  if(condition)
+  {
+    -----------
+  }
+  else
+  {
+    -----------
+  }
+}
+syntax in algo:
+stepno.)If condition,then:
+           If condition,then:
+             ----------.
+           Else:
+             ----------.
+           [End of If structure].
+        Else:
+           If condition,then:
+             ----------.
+           Else:
+             ----------.
+           [End of If structure].
+        [End of If structure].
+    
+ 
+Write an algo to find maximum value out of 3 entered numbers.
+
+Largest_Finder_3_Numbers(A,B,C,MAX)
+1)Read A,B,C.
+2)If A>B,then:
+     If A>C,then:
+      Set MAX:=A.
+     Else:
+      Set MAX:=C.
+     [End of If structure].
+  Else:
+     If B>C,then:
+      Set MAX:=B.
+     Else:
+      Set MAX:=C.
+     [End of If structure].
+  [End of If structure].
+3)Write MAX.
+4)Exit.
+
+  if(10>2)
+    if(10>3)
+       if(10>4)
+         printf("hello");
+    else
+       printf("bye"); 
+  else
+    printf("welcome");
+
+                                Dangling else
+  if(10>2)
+  if(10>3)
+  if(10>4)
+  printf("hello");
+  else
+  printf("bye");
+  else
+  printf("welcome");
+
+4)Ladder if-else-if
+  syntax in C/C++:
+if(condition)
+{
+-------
+} 
+else if(condition)
+{
+------
+}
+else
+{
+------
+}
+
+      Syntax in Algo:
+ stepno.)If condition,then:
+          -----------.
+         Else If condition,then:
+          -----------.
+         Else:
+          -----------.
+         [End of If structure].
+ 
+Write an algo to enter marks of a student and print the obtained
+grade using following criteria:
+     marks       grade
+     90 to 100    A++
+     80 to 89     A
+     70 to 79     B
+     below 70     F
+
+Grade_Finder(MARKS,GRADE)
+1)Read MARKS.
+2)If MARKS>100,then:
+  Write "Invalid Marks" and Exit.
+  Else If MARKS>=90,then:
+  Set GRADE:="A++".
+  Else If MARKS>=80,then:
+  Set GRADE:="A".
+  Else If MARKS>=70,then:
+  Set GRADE:="B".
+  Else:
+  Set GRADE:="F".
+  [End of If structure].
+3)Write GRADE.
+4)Exit.
+
+Ladder if-else to switch conversion:
+
+   situation:
+
+if(var/expr==value1)
+{
+-------
+}
+else if(var/expr==value2)
+{
+-------
+}
+else 
+{
+-------
+}
+
+ rules where we can use switch:
+1) when same variable/expression is comapared in all the conditions with
+the help of == operator
+2) comparison is done only with character/integer constants or
+constant expression.
+
+syntax of switch:
+switch(variable/expression)
+{
+  case value1:
+     --------
+     break;
+  case value2:
+     --------
+     break;
+  default: 
+     --------
+} 
+
+Algorithm for iterative(Looping) statements:
+
+1) while loop:
+
+syntax in c/c++:
+
+loopvariable startvalue;
+while(condition)
+{
+------------;
+------------;
+ increment/decrement;
+}
+
+
+Syntax in algo:
+
+stepno1)Set LoopVariable:=value.
+stepno2)Repeat step/steps  stepnos.......  While condition:
+stepno3) -----------.
+stepno4) -----------.
+stepno5)Increment/Decrement.
+       [End of stepno2 loop].
+
+
+
+
+10 times
+            way1:   1 to 10
+            way2:   10 to 1
+            way3:   0 to 9
+            way4:   9 to 0
+            way5:   11 to 20
+            way6:   20 to 11
+
+   min to max                         max to min
+
+   
+  65   to 100 
+ 
+i=65;
+while(i<=100)
+{
+i++;
+}
+
+
+  100 to 900
+
+i=100;
+while(i<=900)
+{
+i++;
+}
+
+   989   to   345
+
+i=989;
+while(i>=345)
+{
+i--;
+}
+
+    min  to  max
+
+i=min;
+while(i<=max)
+{
+i++;
+}
+
+     max to min
+
+i=max;
+while(i>=min)
+{
+i--;
+}
+Write an algo to print counting from 1 to N using while loop.
+
+Print_Counting(N)
+1)Read N.
+2)Set I:=1.
+3)Repeat steps  4,5  While I<=N:
+4)Write I.
+5)Set I:=I+1.
+  [End of step3 loop].
+6)Exit.
+
+
+2)for loop:
+  syntax in c/c++:
+for(loopvariable startvalue;condition;increment/decrement)
+{
+-----------------;
+}
+
+variations:
+for(;condition;increment/decrement)
+{
+-----------------;
+}
+
+for(;condition;)
+{
+-----------------;
+}
+for(;;)
+{
+-----------------;
+}
+
+Syntax in algo:
+1) 1 to N   [by default increment of 1 is assumed ]
+
+ stepno.1)Repeat step/steps   stepnos...... For I:=1 to N
+ stepno.2)--------------------.
+ stepno.3)--------------------.
+         [End of stepno.1 loop].
+
+2) N to 1   [by default decrement of 1 is assumed ]
+
+ stepno.1)Repeat step/steps   stepnos...... For I:=N to 1
+ stepno.2)--------------------.
+ stepno.3)--------------------.
+         [End of stepno.1 loop].
+
+special case:
+         
+ stepno.1)Repeat step/steps   stepnos...... For I:=1 to N By 3
+ stepno.2)--------------------.
+ stepno.3)--------------------.
+         [End of stepno.1 loop].
+  here By 3 means I is incremented by value 3
+
+Q.Write an algo to print counting from 1 to N using for loop.
+
+Print_Counting(N)
+1)Read N.
+2)Repeat step 3  For I:=1 to N
+3)Write I.
+  [End of step 2 loop].
+4)Exit.
+
+3) do-while loop:
+syntax in c/c++:
+loopvariable startvalue;
+do
+{
+-----------;
+-----------;
+increment/decrement; 
+}while(condition); // compulsory semicolon  
+   
+syntax in algo:
+stepno.1)Set LoopVariable:=startvalue.
+stepno.2)-----------------.
+stepno.3)-----------------.
+stepno.4)increment/decrement.
+stepno.5)If condition,then: goto step 2.
+         [End of If structure].
+
+Q. Write an algo To print counting from 1 to N using do-while loop.
+
+Print_Counting(N)
+1)Read N.
+2)Set I:=1.
+3)Write I.
+4)Set I:=I+1.
+5)If I<=N,then: goto step3.
+  [End of If structure].
+6)Exit. 
+
+
+Q. Write an algo to find factorial of a number.
+  
+ Factorial_Finder(N)
+1)Read N.
+2)Set I:=1,FACT:=1.
+3)Repeat steps 4,5  While I<=N:
+4)Set FACT:=FACT*I.
+5)Set I:=I+1.
+  [End of step3 loop].
+6)Write FACT.
+7)Exit.
+
+ Factorial_Finder(N)
+1)Read N.
+2)Set FACT:=1.
+3)Repeat step 4  For I:=1 to N
+4)Set FACT:=FACT*I.
+  [End of step3 loop].
+5)Write FACT.
+6)Exit.
+
+ Factorial_Finder(N)
+1)Read N.
+2)Set I:=1,FACT:=1.
+3)Set FACT:=FACT*I.
+4)Set I:=I+1.
+5)If I<=N,then:goto step 3.
+  [End of If structure].
+6)Write FACT.
+7)Exit.
+
+
+
+Write an algo to count no. of digits in a number entered by user
+and also reverse the number.
+
+Reverse_And_Digit_Counter(N)
+1)Read N.
+2)Set I:=N,REVERSE:=0,COUNT:=0.
+3)Set COUNT:=COUNT+1.
+4)Set REVERSE:=REVERSE*10+I%10.
+5)Set I:=I/10.
+6)If I!=0,then:goto step3. 
+  [End of If structure].
+7)Write COUNT,REVERSE.
+8)Exit.
+
+Q.1 Write an algo to find whether a number is prime or not.
+Q.2 Write an algo to find whether a number is palindrome or not.
+
+
+Performance of Algorithm:
+
+IT means how the algorithm will behave when different-2 input size
+are provided.
+
+types:
+    1)Best case performance-when min. time/space are needed 
+    2)Average case performance- when average time/space are needed
+    3)Worse case performance - when max time/space are needed
+
+Time and space complexity:
+  IT is a measure of amount of time and space taken by a program
+/algo. when it is executed.
+
+Certain notations are used to measure complexities:
+
+1)Big O(Big Oh) notation:
+        O(f(n))
+ here f(n) is a function which is an expression that may
+consists of constants,variables,polynomials,exponentiation,
+lograithms......
+
+Conventions used in Big O notation:
+   - it works for tight(highest) boundry conditions.
+   - it always neglects the lowest terms in f(n) since 
+   it assumes the value of n is
+ very large so there will
+be less or no effect if we discard lowest terms and constants from
+f(n)
+  
+cases in Big O notations:
+1)O(1) constant time(single unit of time).
+     Program/algo which do not  contains loops,recursion.
+   i.e. only having simple statements are O(1).
+
+  e.g.
+   function for finding sum,average,swapping 2 numbers
+
+2)O(n) 
+       a  loop which runs n times:
+
+    for(i=1;i<=n;i++)
+    {
+        ----------
+    } 
+          or
+    for(i=n;i>=1;i--)
+    {
+        ------------
+    } 
+3)O(m+n) 
+        2 loops running parallely:
+ 
+    for(i=1;i<=n;i++)
+    {
+        ----------
+    } 
+       for(j=1;j<=m;j++)
+    {
+        ----------
+    } 
+   
+4)O(n2)   :
+    2 nested loops 
+    for(i=1;i<=n;i++)
+    {
+         for(j=1;j<=n;j++)
+         {
+          ----------
+         } 
+    } 
+
+5)O(n3)  
+   3 nested loops    
+    for(i=1;i<=n;i++)
+    {
+         for(j=1;j<=n;j++)
+         {
+           for(k=1;k<=n;k++)
+           {
+              -------------
+           } 
+         } 
+    } 
+6) O(Log N):
+      a loop which increments its variable by multiplying itself
+by 2 or increments its variables by dividing itself by 2.
+
+   for(a=1;a<=n;a=a*2)              for(a=n;a>=1;a=a/2)
+   {                                {
+     ----------                      -------------
+   }                                }
+
+   
+       
+7) O(N Log N)
+
+    for(i=1;i<=n;i++)
+    {
+        for(a=1;a<=n;a=a*2)
+        {
+        -------------
+        }
+    }
+           or
+        for(a=1;a<=n;a=a*2)
+        {
+            for(i=1;i<=n;i++)
+            {
+            ---------   
+            } 
+        }
+
+Array:
+   - Linear DS
+   - it is used when similar type of elements are to be
+stored under 1 name  at continous memory locations.
+   (to avoid the problem of taking number of variables).
+
+
+   types of array:
+1) 1-d (one dimensional)array - similar to row matrix
+    All elements are stored in one single row
+
+2) 2-d (two dimensional)array - similar to normal matrix
+    All elements are stored in multiple  rows of equal size.
+
+3) M-d (multi-dimensional) array -cubical or three dimensional
+way of storing data.
+
+   Category:
+  1)static Array- Fixed size array
+                - its size is known at compile time 
+                - its size cant be increased/decreased once
+                  created
+                - it may lead to shortage or wastage of memory
+
+note: in C/C++ array boundry limits are never checked by program
+so if you try to enter at wrong index or beyond the array boundry
+than it may lead to run time error or segmentation fault in RAM.
+
+  2)dynamic array - Variable size array
+                  - its size it not known at compile time
+                  -its size can be increased/decreased after
+                    creation.
+                  - No shortage or wastage of memory
+                  
+Operations:
+1)Traversal -Visiting of elements of array
+2)Search - Searching the occurrence of an element in array
+3)Insertion- Inserting an element in partially filled array
+4)Deletion- Deleting an element from array
+5)Sorting- Arrangement of elements of array in ascending/descending order.
+6)Merging- Merging 2 sorted array into one.
+
+
+Note: In algorithm index no. of array will start from 1 
+      but in program it will start with 0.
+
+This algo. is used to traverse an array ARR of  N elements
+
+Traversal(ARR,N)
+1)Set I:=1.
+2)Repeat steps 3,4  While I<=N:
+3)Write ARR[I].
+4)Set I:=I+1.
+  [End of step2 loop].
+5)Exit.
+
+Q.1 Write an algo. to find sum of elements of array.
+Q.2 Write an algo. to find Largest element of array.
+
+Sum_Of_Element_of_Array(ARR,N)
+1)Set I:=1,SUM:=0.
+2)Repeat steps 3,4  While I<=N:
+3)Set SUM:=SUM+ARR[I].
+4)Set I:=I+1.
+  [End of step2 loop].
+5)Write SUM.
+6)Exit.
+
+Largest_Element_Array(ARR,N)
+1)Set I:=2,MAX:=ARR[1].
+2)Repeat steps 3,4  While I<=N:
+3)If MAX<ARR[I],then:
+  Set MAX:=ARR[I].
+  [End of If structure].
+4)Set I:=I+1.
+  [End of step2 loop].
+5)Write MAX.
+6)Exit.
+
+Write an algo to find sum of only even elements of array.
+ 
+Sum_Of_Even_Element_of_Array(ARR,N)
+1)Set I:=1,SUM:=0.
+2)Repeat steps 3,4  While I<=N:
+3)If ARR[I]%2=0 ,then:
+   Set SUM:=SUM+ARR[I].
+  [End of If structure].
+4)Set I:=I+1.
+  [End of step2 loop].
+5)Write SUM.
+6)Exit.  
+
+Insertion of an element in array(sorted):
+   Given:
+          ARR an array of N elements  intially and MAXSIZE is also provided.
+         ARR is sorted array and we have to insert an element
+         and after insertion array must remain sorted.
+
+Note: Here N<MAXSIZE 
+      but in  program before calling insert function we will first check for overflow(completely filled array)
+
+        if(N==MAXSIZE)
+        {
+            OVERFLOW
+        }
+         
+This algo. is used to insert an ITEM in sorted array ARR at its
+exact position.
+
+Insert_Sorted_Array(ARR,N,ITEM)
+1)Read ITEM.
+2)Set I:=N.
+3)Repeat steps 4,5  While I>=1:
+4)If ARR[I]>ITEM,then:
+  Set ARR[I+1]:=ARR[I].
+  Else:
+   goto step6.
+  [End of If structure].
+5)Set I:=I-1.
+  [End of step3 loop].
+6)Set ARR[I+1]:=ITEM,N:=N+1.
+7)Exit.
+Insert_Sorted_Array(ARR,N,ITEM)
+1)Read ITEM.
+2)Set I:=N.
+3)Repeat steps 4,5  While I>=1 && ARR[I]>ITEM:
+4)Set ARR[I+1]:=ARR[I].
+5)Set I:=I-1.
+  [End of step3 loop].
+6)Set ARR[I+1]:=ITEM,N:=N+1.
+7)Exit.
+
+Best case time:when Largest element is to be inserted then there will be no shifting.
+           O(1)
+
+Worst case time:when samllest element is to be inserted then there will be N shifting.
+           O(N)
+ 
+Average case time:
+           O(N)
+
+
+ 
+Insertion of an element in array(UNsorted):
+   Given:
+          ARR an array of N elements  intially and MAXSIZE is also provided.
+         ARR is UNsorted array and we have to insert an element
+at a specfied POS(index no) by user.
+ 
+  Note:
+        In algo POS is assumed as valid position and N<MAXSIZE
+
+   But in program we must check whether the POS is valid or not
+and there is no overflow in array.
+
+if(POS<1 || POS>N+1)          if(POS<0 || POS>N)
+{                             {
+invalid position                  Invalid position
+} in algo                     } //  in program
+ 
+
+Insert_Unsorted_Array(ARR,N,ITEM,POS)
+1)Read ITEM.
+2)Set I:=N.
+3)Repeat steps 4,5  While I>=POS:
+4)Set ARR[I+1]:=ARR[I].
+5)Set I:=I-1.
+  [End of step3 loop].
+6)Set ARR[POS]:=ITEM,N:=N+1.
+7)Exit.
+
+
+
+DELETION OF ELEMENT FROM ARRAY(SORTED/UNSORTED):
+ 
+GIVEN:  ARR is an array with N elements and of MAXSIZE.
+      We have to delete an element either by POS(index no.)
+specified by user or by searching the element to be deleted.
+
+Note:
+     In Program  WE must check array for non emptyness
+(underflow/empty array) before deletion.
+       If deletion is done by POS then check for valid position.
+
+  if(N==0)
+  {
+    Underflow
+  } 
+
+if(POS<1 || POS>N)        if(POS<0 || POS>N-1)
+{                         {
+invalid position           invalid position
+}                         }
+
+This algo. is used to delete an element from array ARR with
+N elements from specified position POS.
+
+Delete_Element_Array(ARR,N,POS)
+1)Set I:=POS.
+2)Repeat steps 3,4  While I<=N-1:
+3)Set ARR[I]:=ARR[I+1].
+4)Set I:=I+1.
+  [End of step2 loop].
+5)Set N:=N-1.
+  [Element is deleted by decreasing the N by 1],
+6)Exit.
+
+
+Best case time: when element to be deleted is at last position
+                no shifting of elements is done
+               O(1) constant time
+
+Worst case time: when element to be deleted is first element 
+             then all elements will be shifted
+               O(N) 
+Average case time:
+               O(N)
+
+
+This algo. is used to delete an element from array ARR with
+N elements By searching it.
+
+Delete_Element_Array_By_Search(ARR,N,ITEM)
+1)Read ITEM.
+2)Set I:=1.
+3)Repeat step 4  While I<=N && ARR[I]!=ITEM:
+4)Set I:=I+1.
+  [End of step 3 loop].
+5)If I==N+1,then:
+  Write Element cant be deleted and Exit.
+  [End of If structure].
+6)Repeat steps 7,8  While I<=N-1:
+7)Set ARR[I]:=ARR[I+1].
+8)Set I:=I+1.
+  [End of step6 loop].
+9)Set N:=N-1.
+  [Element is deleted by decreasing the N by 1],
+10)Exit.
+
+Best/average/worst case time:
+                                 O(N)
+
+Searching:
+        1)Linear Search
+        2)Binary search
+        3)Hashing
+
+1)Linear Search:It is a sequential search technique which compares
+an item with every element of array from lower boundry to 
+upper boundry of array.
+
+   It is generally used when array is unsorted.
+
+Linear_Search(ARR,N,ITEM)
+1)Read ITEM.
+2)Set I:=1.
+3)Repeat step 4  While I<=N && ARR[I]!=ITEM:
+4)Set I:=I+1.
+  [End of step 3 loop].
+5)If I==N+1,then:
+  Write Element not found.
+  Else:
+  Write Element found.
+  [End of If structure].
+6)Exit.
+Linear_Search(ARR,N,ITEM)
+1)Read ITEM.
+2)Set I:=1.
+3)Repeat steps 4,5  While I<=N:
+4)If ITEM=ARR[I],then:
+  Write Item found and Return.
+  [End of If structure].
+5)Set I:=I+1.
+  [End of step 3 loop].
+6)Write Item found.
+7)Exit.
+Best case time: O(1) when element to be searched is found at 
+                     first index
+
+worst case time: O(N) when element to be searched is  not found                      or at last index.
+Average case time: O(N)
+
+
+Binary search:
+This search technique is based on divide and conquer approach
+                             (Break the array into 2 parts
+                              and perform operation only on 
+                             1 part and leave the other part)
+
+Linear search will take very much time if value of N is very large
+and in real life records/values are sorted in some order.
+
+Binary search works on sorted array and takes only
+ O(logN) time which is very low in comparison of O(N)
+
+           say   N=65536
+   linear seacrh will take 65536 unit of time in worst case
+   binary search  will take 16 unit of time in worst case
+ 
+Given:   ARR a sorted array of N elements
+       INTIALLY  LB(LOWER BOUND)=1  , UB(UPPER BOUND)=N
+     BASE CONDITION LB<=UB (it must be true for every array)
+ 
+     MID a variable which is used to break the array into 2 parts
+ 
+Binary_Search(ARR,N,ITEM)
+1)Read ITEM.
+2)Set LB:=1,UB:=N.
+3)Repeat steps 4,5  While LB<=UB:
+4)Set MID:=(LB+UB)/2.
+5)If ITEM=ARR[MID],then:
+  Write ITEM found and Return.
+  Else If ITEM>ARR[MID],then:
+  Set LB:=MID+1.
+  Else:
+  Set UB:=MID-1.
+  [End of If structure].
+[End of step3 loop].
+6)Write Item not found.
+7)Exit.
+
+Best case time:    O(1)
+Worst case time:   O(LogN)
+Average case time: O(LogN)   
+
+Sorting of array:
+Types:
+1)Selection sort
+2)Bubble sort
+3)Insertion sort
+4)Shell sort
+5)Merge sort
+6)Quick sort
+7)Radix sort
+8)Heap sort
+9)Topological sort 
+                  
+ 
+Selection sort:
+   Process:
+1)In this sorting 1 element is selected and is compared with
+its right side elements and swapped accordingly.
+2)After  all comparisons first element of array will sorted
+3)Above 2 steps are repeated by selecting next element of array
+and comparing with its right side elements.
+
+Loop1: for index selection
+
+Loop2: for comparison of selected index element with
+       its right side     
+
+
+Selection_Sort(ARR,N)
+1)Set I:=1.
+2)Repeat steps 3 to 7  While I<=N-1:
+3)Set J:=I+1.
+4)Repeat steps 5,6 While J<=N:
+5)If ARR[I]>ARR[J],then:
+  Set T:=ARR[I],ARR[I]:=ARR[J],ARR[J]:=T.
+  [End of If structure].
+6)Set J:=J+1.
+  [End of step 4 loop].
+
+7)Set I:=I+1.
+  [End of step 2 loop].
+8)Exit.
+
+Selection_Sort(ARR,N)
+1)Repeat step 2   For I:=1 to N-1
+2)Repeat step 3   For J:=I+1 to N
+3)If ARR[I]>ARR[J],then:
+  Set T:=ARR[I],ARR[I]:=ARR[J],ARR[J]:=T.
+  [End of If structure].
+ [End of step2 loop].
+[End of step 1 loop].
+
+
+Best/worst/average case time is same:
+           O(N2)
+
+Why same time?
+  Since both loops runs completly in every situation sorted/unsorted/partially sorted array.
+
+
+2)Bubble sort:
+  Process:
+  1)In this sorting during scanning of array adjacent elements
+are compared with each other and are swapped accordingly.
+  2)After a pass/scan last element of array will be sorted
+   (largest/smallest will be placed at last)
+  3)Repeat above 2 steps till all elements are not sorted.
+
+loop1 for passes  :  
+          for(I=1;I<=N-1;I++)
+
+loop2 for comparison:
+
+         for(j=1;j<=n-i+1;j++)
+
+                or  take k=n-1
+
+         for(j=1;j<=k;j++)
+                
+              decrease k by 1 after the loop termination
+        
+Bubble_Sort(ARR,N)
+1)Set I:=1.
+2)Repeat steps 3 to 7  While I<=N-1:
+3)Set J:=1.
+4)Repeat steps  5,6  While J<=N-I-1:
+5)If ARR[J]<ARR[J+1],then:
+  Set T:=ARR[J],ARR[J]:=ARR[J+1],ARR[J+1]:=T.
+  [End of If structure].
+6)Set J:=J+1. 
+  [End of step4 loop].
+7)Set I:=I+1.
+  [End of step2 loop].
+8)Exit.
+   
+   Best/average/worst case time:  O(N2)         
+
+Modified_Bubble_Sort(ARR,N,FOUND)
+1)Set I:=1.
+2)Repeat steps 3 to 8  While I<=N-1:
+3)Set J:=1,FOUND:=1.
+4)Repeat steps  5,6  While J<=N-I-1:
+5)If ARR[J]<ARR[J+1],then:
+  Set T:=ARR[J],ARR[J]:=ARR[J+1],ARR[J+1]:=T,FOUND:=0.
+  [End of If structure].
+6)Set J:=J+1. 
+  [End of step4 loop].
+7)If FOUND=1,then:
+  Return.
+  [End of If structure].
+8)Set I:=I+1.
+  [End of step2 loop].
+9)Exit.
+
+Modified_Bubble_Sort(ARR,N,FOUND)
+1)Set I:=1,FOUND:=0.
+2)Repeat steps 3 to 7  While I<=N-1 && FOUND=0:
+3)Set J:=1,FOUND:=1.
+4)Repeat steps  5,6  While J<=N-I-1:
+5)If ARR[J]<ARR[J+1],then:
+  Set T:=ARR[J],ARR[J]:=ARR[J+1],ARR[J+1]:=T,FOUND:=0.
+  [End of If structure].
+6)Set J:=J+1. 
+  [End of step4 loop].
+7)Set I:=I+1.
+  [End of step2 loop].
+8)Exit.
+Best case : O(N)
+Worst case : O(N2)
+Average case: O(N2)
+
+Merging of 2 sorted arrays into 1 array:
+ In this process 2 sorted arrays are given and 1 empty array whose
+size is the sum of size of array1+size of array2 is also provided.
+We have to merge these 2 array in such a way that third array stores all values in sorted order.
+
+
+GIVEN:
+   ARR1 array1 with M elements
+   ARR2 array2 with N elements
+   ARR3 array3 OF   M+N SIZE
+
+Merging(ARR1,ARR2,ARR3,M,N)
+1)Set I:=1,J:=1,K:=1.
+2)Repeat steps 3,4  While I<=M && J<=N:
+3)If ARR1[I]<ARR2[J],then:
+  Set ARR3[K]:=ARR1[I],I:=I+1.
+  Else:
+  Set ARR3[K]:=ARR2[J],J:=J+1.
+  [End of If structure].
+4)Set K:=K+1.
+  [End of step2 loop].
+5)Repeat step 6  While I<=M:
+6)Set ARR3[K]:=ARR1[I],I:=I+1,K:=K+1.
+  [End of step5 loop].
+7)Repeat step 7  While J<=N:
+8)Set ARR3[K]:=ARR2[J],J:=J+1,K:=K+1.
+  [End of step7 loop].
+9)Exit.
+
+Time of Merging will be O(N)
+ Let N is the size of array3 in which elements are to be copied.
+  SO TIME of copying will be O(N)
+and also N is the sum of size of array1 and array2
+
+or it can be O(M+N) if M IS SIZE OF ARRAY1 AND N IS SIZE OF ARRAY2
+
+
+MERGE SORT:
+  - IT is based on divide and conquer technique.
+  - It basically divides the array into 2 sub-sorted arrays and 
+    then it merges them.
+  - It takes an extra array(temporary) to sort the array                  
+solution: 
+  1)Recursive solution:
+  2)Non Recursive solution:
+
+Merge_Sort(ARR,LB,UB)
+1)If LB<UB,then:
+  a)Set MID:=(LB+UB)/2.
+  b)Call Merge_Sort(ARR,LB,MID).
+  c)Call Merge_Sort(ARR,MID+1,UB).
+  d)Call Merging(ARR,LB,MID,MID+1,UB).
+  [End of If structure].
+2)Return.
+
+Merging(ARR,LB1,UB1,LB2,UB2,TEMP)
+1)Set I:=LB1,J:=LB2,K:=LB1.
+2)Repeat steps 3,4  While I<=UB1 && J<=UB2:
+3)If ARR[I]<ARR[J],then:
+  Set TEMP[K]:=ARR[I],I:=I+1.
+  Else:
+  Set TEMP[K]:=ARR[J],J:=J+1.
+  [End of If structure].
+4)Set K:=K+1.
+  [End of step2 loop].
+5)Repeat step 6  While I<=UB1:
+6)Set TEMP[K]:=ARR[I],I:=I+1,K:=K+1.
+  [End of step5 loop].
+7)Repeat step 7  While J<=UB2:
+8)Set TEMP[K]:=ARR[J],J:=J+1,K:=K+1.
+  [End of step7 loop].
+9)Repeat step 10   For I:=LB1 to UB2
+10)Set ARR[I]:=TEMP[I]
+11)Return.
+
+
+Time of partitioning:  Log
+
+Time to merge 2 partitions: N
+Time to copy in original array:N
+                             = 2N
+
+
+Total time for all  array sorting :  2NlogN
+
+                 discarding constants:
+                                     NLogN
+
+best/average/worst case time: O(NLogN) 
+ 
+
+Non Recursive solution:
+Merge_Sort(ARR,LB1,UB1,LB2,UB2,N)
+1)Set SIZE:=1.
+2)Repeat steps 3 to 13  While SIZE<N:
+3)Set LB1:=1.
+4)Repeat steps  5 to 8  While LB1+SIZE<=N:
+5)Set LB2:=LB1+SIZE,UB1:=LB2-1.
+6)If UB1+SIZE<=N,then:
+  Set UB2:=UB1+SIZE.
+  Else:
+  Set UB2:=N.
+  [End of If structure].
+7)Call Merging(ARR,LB1,UB2,LB2,UB2,TEMP).
+8)Set LB1:=LB2+1.
+  [End of step 4 loop].
+9)Repeat step  10  While LB1<=N:
+10)Set TEMP[LB1]:=ARR[LB1],LB1:=LB1+1.
+  [End of step 9 loop].
+  [Used to copy remaining array whose second pair is not formed].
+11)Repeat step 12  For I:=1 to N
+12)Set ARR[I]:=TEMP[I].
+  [End of step 11 loop].
+  [Used to copy the sorted array into original array] 
+13)Set SIZE:=SIZE*2.
+  [End of step 2 loop].
+14)Exit.
+
+
+Insertion Sort:
+  Process:
+  1)In this sorting 1 element is picked from array(usually from second element)
+  2)Now picked element is compared with its left side elements
+ and if left side elements are smaller/larger than picked 
+element than shift 1 position forward all the left elements.
+  
+  3)Now after all shifting is finished the picked element is inserted at its proper position(it will 1 more than where the loop stops).
+   
+  4)Repeat above 3 steps by picking next elements 
+  
+
+(It is based on sorting of playing cards)
+
+Loop1:  for index picking  
+        for(i=2;i<=n;i++)
+
+Loop2:
+        for comparison with left side elements of i index element
+
+        for(j=i-1;j>=1&&pick<a[j];j--)
+
+
+Insertion_Sort(ARR,N)
+1)Set I:=2.
+2)Repeat steps 3 to 7  While I<=N:
+3)Set PICK:=ARRP[I],J:=I-1.
+4)Repeat steps 5,6  While J>=1 && PICK<ARR[J]:
+5)Set ARR[J+1]:=ARR[J].
+6)Set J:=J-1.
+  [End of step 4 loop].
+7)Set ARR[J+1]:=PICK,I:=I+1.
+  [End of step 2 loop].
+8)Exit.
+
+Best case time:  O(N) when array is already sorted
+
+worst case time: O(N2)when array in descending order and we have to sort in ascending order or vice-versa.
+
+Average case time: O(N2) 
+
+
+int *p; -pointer(address) to int (integer pointer)
+        -it will store the address of int type variable
+         where int type value is stored.
+        -it can read 2 bytes at time 
+
+char *q; -pointer(address) to char (character pointer)
+        -it will store the address of char type variable
+         where char type value is stored.
+        -it can read 1 byte at a time 
+
+float *q;-pointer(address) to float (float pointer)
+        -it will store the address of float type variable
+         where float type value is stored.
+        -it can read 4 bytes at time
+
+In all these 3 cases 
+ p ,q and r all are storing only location numbers.
+ 
+int *p;      // ideal syntax   
+int *      p;          
+int*    p;
+ 
+all are valid.
+
+Intialization and assigment in pointers:
+  are intialized with address only.
+
+1)
+ float a=1.1;
+ float *p=&a;
+
+2)float a=1.1,*p=&a;
+
+3)float *p=&a,a=1.1;  // error a must be created first
+
+4)float *p,a=1.1;  //here p is filled with garbage address
+  p=&a;
+
+
+int a=10,b=20;
+float *p;
+p=&a;     // cant convert from int *  to  float * 
+
+
+int a=10,b=20;
+int *p,*q;
+
+p=&a,q=&b;
+
+  p==&a        q==&b
+
+     How to access values from address :
+* unary operator  (derefrencing  operator)
+
+syntax:
+         * address   
+         
+p  =&a = 2000            (i)   
+&p =3000  
+*p = *&a=*2000=10=a      (ii)   
+*&p = *3000=2000=&a
+&*p = &a= 2000 =p
+**p = *a  //error 
+&*&p =  &&a  = &p    =3000 
+ &&*p = &&a  // error
+
+&&*&*&p =&&*&*3000= &&*&2000=&&*&p=&&*3000= &&2000=&&p=&3000
+                                                   //error
+**&*&*p= **&*&10=**&*&a=**&*2000=**&10=**&a=**2000=*10=*a//error  
+
+&&**&*&p=&&**&*3000=&&**&2000=&&**&p=&&**3000=&&*2000=
+  
+&&*p=&&10=&&a=&2000// error
+
+
+
+
+
+
+
+Dynamic memory allocation:
+    
+    Dynamic variable(structure variable) or dynamic array creation:
+
+   MEmory management functions:
+   <alloc.h>         <stdlib.h>
+
+1)malloc  2) calloc    3) realloc
+       (for memory allocation)          
+
+4)free 
+       (for memory deallocation)
+
+Note: In C/C++ if memory is allocated at runtime by memory management functions than this memory will not be freed by system
+it must be realeased by free function otherwise it will remain in
+RAM untill system is not restarted.
+
+1)malloc function:
+         syntax:
+                  void * malloc(int totalbytes);
+
+ - it accepts total bytes required 
+ - it returns NULL value if total bytes are not available otherwise it return the base address of the memory block.
+ - it return void pointer and in C we can store void * in any type of pointer directly.
+
+
+                 e.g.
+  
+        int *p=malloc(20);
+
+        char *p=malloc(10*sizeof(int));
+           
+       float *p=malloc(4*sizeof(float));
+                                      20 byte block
+
+Steps to create a 1-d array:
+1)Create a pointer of specified type
+2)Take a variable SIZE and input the size of array in it.
+3)Now send total bytes required for array (SIZE*sizeof(datatype))
+  into malloc function and store in the pointer.
+4)now use pointer name as array name.
+  e.g.  
+    int *p;
+    int size;
+    scanf("%d",&size);
+   p=(int *)malloc(size*sizeof(int));
+   if(p==NULL) 
+   {
+     printf("Insufficient memory");     
+   } 
+  // now it is just like  int p[size];
+    float *p;
+    int size;
+    scanf("%d",&size);
+   p=(float *)malloc(size*sizeof(float));
+   if(p==NULL) 
+   {
+     printf("Insufficient memory");     
+   } 
+  // now it is just like  float p[size];
+
+Note: Malloc function by default stores garbage value in the allocated block...
+     
+
+2)free function:
+     it will unlock the memory occupied (releases the memory)
+so that the memory can be used for some other parts also.
+
+
+  syntax:
+      void free(pointername);
+                   
+ pointername-by which memory is occupied.          
+
+
+
+
+                        LINK LIST:
+- Linear DS
+- It is a collection of nodes(which store names,values or record)
+- Link list never requires contiguous block of memory(Big memory block like array).
+- So to overcome the problem of array link list was introduced. 
+- link list is foundation for implementing Non linear DS such as tree and graph.
+
+Applications of link list:
+1) Backward and forward button of browsers are implemented using link list.(2-way link list)
+
+2) Task/process scheduling in operating system.
+
+3) Tree and graph data structure are also created  by link list
+    
+  Types of link list:
+
+1)Singly link list(1-way list)
+2)doubly link list(2-way list)
+3)Circular link list(1-way circular,2-way circular)
+4)Header link list(circular header link list)
+5)Polynomial link list(addition,multiplication of polynomials)
+
+
+Singly link list:
+It is a linear collection of nodes which are linked with each others.
+Here a Node contains:
+       1)Data/record/information
+       2)Address of next(forward) node.
+
+Note: Last node of link list will store NULL in the address part
+which denotes there is  no node after it.
+
+Implemention:
+1)using structure in program.
+2)using array in algorithm.
+
+Traversal of singly list:
+    IN PROGRAM           IN ALGO
+     PTR->INFO            INFO[PTR]  (WILL GIVE THE DATA PART)
+
+     PTR->LINK            LINK[PTR]   (WILL GIVE THE ADDRESS OF
+                                      NEXT NODE)
+
+                                     
+Traversal(START,INFO,LINK)
+1)Set PTR:=START.
+2)Repeat steps  3,4  While PTR!=NULL:
+3)Write INFO[PTR].
+4)Set PTR:=LINK[PTR].
+  [End of step 2 loop].
+5)Exit.
+
+  Insertion of a node in Link List(unsorted/sorted list)
+
+NOTE: we cant use malloc,new any language specific functions in
+algo so we are taking AVAIL a memory pointer which gives memory
+at run time.
+
+steps:  1)Check for overflow (memory is available or not)
+                        AVAIL=NULL overflow
+        2)Get the node from AVAIL and store in some POINTER(say                                                  NODE)
+        3)Now update the AVAIL.(move it on next free memory block in memory.) AVAIL:=LINK[AVAIL]
+
+Here it is assumed that in memory there is a free link list from where we have to get the nodes.    
+      
+1)INSERTION AT START
+2)INSERTION AT END
+3)INSERTION AT ANY POSITION    
+
+Insertion_Start(START,AVAIL,LINK,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)Set LINK[NODE]:=START.
+4)Set START:=NODE.
+5)Exit.  
+
+Insertion_End(START,AVAIL,LINK,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL],LINK[NODE]:=NULL.
+3)Set PPTR:=NULL,PTR:=START.
+4)Repeat steps 5,6  While PTR!=NULL:
+5)Set PPTR:=PTR.
+6)Set PTR:=LINK[PTR].
+  [End of step 4 loop].  
+7)If PPTR=NULL,then:
+  Set START=NODE.
+  Else:
+  Set LINK[PPTR]:=NODE.
+  [End of If structure].
+8)Exit.
+
+
+Insertion_End(START,AVAIL,LINK,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL],LINK[NODE]:=NULL.
+3)If START=NULL,then:
+  Set START:=NODE and Return.
+  [End of If structure].
+4)Set PTR:=START.
+5)Repeat step 6  While LINK[PTR]!=NULL:
+6)Set PTR:=LINK[PTR].
+  [End of step 5 loop].  
+7)Set LINK[PTR]:=NODE.
+  [End of If structure].
+8)Exit.
+
+wRITE AN ALGO TO COUNT NO. OF NODES IN A LINK LIST:
+ HINT:
+    TAKE A VARIABLE COUNT:=0.
+
+Node_Counter(START,LINK,COUNT)
+1)Set PTR:=START,COUNT:=0.
+2)Repeat steps  3,4  While PTR!=NULL:
+3)Set COUNT:=COUNT+1.
+4)Set PTR:=LINK[PTR].
+  [End of step 2 loop].
+5)Write COUNT.
+6)Exit.
+
+
+
+WRITE AN ALGO TO SEARCH AN ITEM PRESENCE IN THE LINK LIST
+USING LINEAR SEARCH.
+ HINT: READ A VARIABLE  ITEM
+
+
+       Insertion of a node in sorted Link List:
+Insertion_Sorted(AVAIL,START,LINK,INFO,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)Set PPTR:=NULL,PTR:=START.
+4)Repeat  steps 5,6  While PTR!=NULL && INFO[NODE]>INFO[PTR]:
+5)Set PPTR:=PTR.
+6)Set PTR:=LINK[PTR].
+ [End of step 4 loop].
+7)Set LINK[NODE]:=PTR.
+8)If PPTR=NULL,then:
+  Set START:=NODE.
+  Else:
+  Set LINK[PPTR]:=NODE.
+  [End of If structure].
+9)Exit.     
+          Insertion of a node in unsorted Link List at a specified position:
+
+Insertion_Unsorted(AVAIL,START,LINK,INFO,NODE,POS)
+1)Read POS.
+2)Set I:=1,PPTR:=NULL,PTR:=START.
+3)Repeat  steps 4,5  While PTR!=NULL && I<POS:
+4)Set PPTR:=PTR.
+5)Set PTR:=LINK[PTR],I:=I+1.
+ [End of step 3 loop].
+6)If POS!=I,then:
+  Write Invalid position and Return.
+  [End of if structure].
+7)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+8)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+9)Set LINK[NODE]:=PTR.
+10)If PPTR=NULL,then:
+  Set START:=NODE.
+  Else:
+  Set LINK[PPTR]:=NODE.
+  [End of If structure].
+11)Exit. 
+
+ Deletion of  a node from link list:
+
+Note:
+        1)check for under flow (is link list empty)
+                   START=NULL
+
+        2)nOW FIND THE NODE TO BE DELETED BY GIVEN PROCESS
+
+        3)AND GIVE THE DELETED NODE TO AVAIL
+       (TO RAM)  (FREE FUNCTION WORKING)
+
+nOTE: SIMPLY INSERT THE DELETED NODE AT STARTING OF AVAIL.
+
+
+STEP OF RELEASING A DELETED NODE:
+
+   LINK[NODE]:=AVAIL,AVAIL:=NODE.
+ 
+INSTEAD OF NODE IT CAN BE ANY NAME LIKE: TEMP,PTR
+ 
+   LINK[TEMP]:=AVAIL,AVAIL:=TEMP.
+
+   LINK[PTR]:=AVAIL,AVAIL:=PTR.
+
+
+TYPES:
+1)DELETION FROM START
+2)DELETION FROM END
+3)DELETION BY SEARCHING (BY POSITION)
+
+Deletion_Start(START,AVAIL,LINK,NODE)
+1)If START=NULL,then:
+  Write Undeflow and Return.
+  [End of If structure].
+2)Set NODE:=START.
+3)Set START:=LINK[START].
+4)Set LINK[NODE]:=AVAIL,AVAIL:=NODE.
+5)Exit.
+
+Deletion_End(START,AVAIL,LINK)
+1)If START=NULL,then:
+  Write Undeflow and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=START.
+3)Repeat steps  4,5  While LINK[PTR]!=NULL:
+4)Set PPTR:=PTR.
+5)Set PTR:=LINK[PTR].
+  [End of step 3 loop].
+6)If PPTR=NULL,then:
+  Set START:=NULL.
+  Else:
+  Set LINK[PPTR]:=NULL.
+  [End of If structure].
+7)Set LINK[PTR]:=AVAIL,AVAIL:=PTR. 
+8)Exit.
+
+
+
+          Deletion By Searching:
+Deletion_Search(START,AVAIL,LINK,INFO,ITEM)
+1)If START=NULL,then:
+  Write Undeflow and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=START.
+3)Repeat steps 4,5  While PTR!=NULL && ITEM!=INFO[PTR]:
+4)Set PPTR:=PTR.
+5)Set PTR:=LINK[PTR].
+  [End of step 3 loop].
+6)If PTR=NULL,then:
+  Write Node cant be deleted and Return.
+  [End of If structure].
+7)If PPTR=NULL,then:
+  Set START:=LINK[START].
+  Else:
+  Set LINK[PPTR]:=LINK[PTR].
+  [End of If structure].
+8)Set LINK[PTR]:=AVAIL,AVAIL:=PTR.
+9)Exit.       
+
+
+                       Sorting of linklist:
+
+Process:
+
+1) select first node of linklist and compare it with its
+right side nodes(i.e. from second node to last node) and swap the
+info accordingly.
+
+2) select second node of linklist and compare it with its
+right side nodes(i.e. from third node to last node) and swap the
+info accordingly.
+
+.........................
+n-1)select second last node of link list and compare it with
+its right side nodes(i.e from last node to last node) and swap
+the info accordingly.
+
+
+loop1: for node selection 
+  
+for(ptr1=start;link[ptr1]!=NULL;ptr1=link[ptr1])
+
+loop2: for comparison with right side elements 
+  
+for(ptr2=link[ptr1];ptr2!=NULL;ptr2=link[ptr2])
+
+
+
+
+Sorting(START,INFO,LINK)
+1)Set PTR1:=START.
+2)Repeat steps 3 to 7  While LINK[PTR1]!=NULL:
+3)Set PTR2:=LINK[PTR1].
+4)Repeat steps  5,6      While PTR2!=NULL:
+5)If INFO[PTR1]>INFO[PTR2],then:
+  Set T:=INFO[PTR1],INFO[PTR1]:=INFO[PTR2],INFO[PTR2]:=T.
+  [End of if structure].
+6)Set PTR2:=LINK[PTR2].
+  [End of step 4 loop].
+7)Set PTR1:=LINK[PTR1].
+  [End of step 2 loop].
+8)Exit.
+
+             Reverse of singly link list:
+
+Process:
+   1)First assume an imginary empty link list.
+     (i.e. START1:=NULL)
+   2)Now one by one take nodes from actual link list and 
+    insert these nodes at starting of START1.
+   3)UPDATE THE START POINTER.
+   4)REPEAT THE ABOVE STEPS TILL ALL NODES ARE NOT INSERTED
+  IN THE IMAGINARY LINK LIST.
+
+Reverse_Link_List(START,START1,PTR,LINK)
+1)Set START1:=NULL.
+2)Repeat steps  3,4,5  While START!=NULL:
+3)Set PTR:=START,START:=LINK[START].
+4)Set LINK[PTR]:=START1.
+5)Set START1:=PTR.
+  [End of step 2 loop].
+6)Set START:=START1.
+7)Exit.
+      Merging of 2 sorted link list into a new link list.
+
+Here 2 sorted link lists will be given to you we have to create a new link list by the info present in the given sorted link list in 
+such a way that new link list will have all data arranged.
+
+Merging(START1,START2,START3,END,LINK,INFO)
+1)Set START3:=NULL,END:=NULL,PTR1:=START1,PTR2:=START2.
+2)Repeat steps  3,4  While PTR1!=NULL && PTR2!=NULL:
+3)If INFO[PTR1]<INFO[PTR2],then:
+  Set ITEM:=INFO[PTR1],PTR1:=LINK[PTR1].
+  Else:
+  Set ITEM:=INFO[PTR2],PTR2:=LINK[PTR2].
+ [End of If structure].
+4)Call Append(START3,END,ITEM,LINK,INFO)
+[End of step 2 loop].
+5)Repeat steps 6,7   While PTR1!=NULL:
+6)Set ITEM:=INFO[PTR1],PTR1:=LINK[PTR1].
+7)Call Append(START3,END,ITEM,LINK,INFO)
+ [End of step 5 loop].
+8)Repeat steps 9,10   While PTR2!=NULL:
+9)Set ITEM:=INFO[PTR2],PTR2:=LINK[PTR2].
+10)Call Append(START3,END,ITEM,LINK,INFO)
+ [End of step 8 loop].
+11)Exit.
+Append(START3,END,ITEM,LINK,INFO)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)Set INFO[NODE]:=ITEM,LINK[NODE]:=NULL.
+4)If START3=NULL,then:
+  Set START3:=END:=NODE.
+  Else:
+  Set LINK[END]:=NODE,END:=NODE.
+  [End of If structure].
+5)Return.
+    Doubly Link list(2-way link list):
+
+-IT is a linear collection of nodes which are linked with each other in such a way that every node in link list stores
+address of previous node and address of next node (2 way address).
+
+
+- Everything is same as singly link list except 1 extra address is stored in every node(address of previous node).
+
+
+- Doubly link list is foundation for implementing binary tree
+operations.
+
+-In doubly link list we can traverse the nodes in both directions
+forward and backward
+
+-In doubly link list we can delete/traverse complete link list from any random node address.
+ 
+Representation:
+1)using structure in program
+2)using array  in algo.
+
+struct doubly
+{
+struct doubly *prev;
+int info;
+struct doubly *next;   
+};
+   to create static link list of 3 nodes:
+
+struct doubly *n1,*n2,*n3,*start;
+n1=malloc(sizeof(struct doubly));
+n2=malloc(sizeof(struct doubly));
+n3=malloc(sizeof(struct doubly));
+n1.info=100,n2.info=200,n3.info=300;
+n1.next=n2,n2.next=n3,n3.next=NULL;
+n1.prev=NULL,n2.prev=n1,n3.prev=n2;
+start=n1;
+
+Node creation:
+
+steps:  1)Check for overflow (memory is available or not)
+                        AVAIL=NULL overflow
+        2)Get the node from AVAIL and store in some POINTER(say                                                  NODE)
+        3)Now update the AVAIL.(move it on next free memory block in memory.) AVAIL:=NEXT[AVAIL]
+
+Here it is assumed that in memory there is a free link list from where we have to get the nodes.    
+
+
+1)INSERTION AT START
+2)INSERTION AT END
+3)INSERTION AT ANY POSITION    
+
+Insertion_Start(START,AVAIL,NEXT,PREV,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=NEXT[AVAIL],PREV[NODE]:=NULL.
+3)Set NEXT[NODE]:=START.
+4)If START!=NULL,then:
+   Set PREV[START]:=NODE.
+  [End of If structure].
+5)Set START:=NODE.
+6)Exit.  
+
+
+
+
+Insertion_End(START,AVAIL,NEXT,PREV,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=NEXT[AVAIL],NEXT[NODE]:=NULL.
+3)Set PPTR:=NULL,PTR:=START.
+4)Repeat steps 5,6  While PTR!=NULL:
+5)Set PPTR:=PTR.
+6)Set PTR:=NEXT[PTR].
+  [End of step 4 loop].  
+7)If PPTR=NULL,then:
+  Set START=NODE.
+  Else:
+  Set NEXT[PPTR]:=NODE.
+  [End of If structure].
+8)Set PREV[NODE]:=PPTR.
+9)Exit.
+
+ Insertion of a node in sorted Link List:
+Insertion_Sorted(AVAIL,START,NEXT,PREV,INFO,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=NEXT[AVAIL].
+3)Set PPTR:=NULL,PTR:=START.
+4)Repeat  steps 5,6  While PTR!=NULL && INFO[NODE]>INFO[PTR]:
+5)Set PPTR:=PTR.
+6)Set PTR:=NEXT[PTR].
+ [End of step 4 loop].
+7)Set NEXT[NODE]:=PTR,PREV[NODE]:=PPTR.
+8)If PPTR=NULL,then:
+  Set START:=NODE.
+  Else:
+  Set NEXT[PPTR]:=NODE.
+  [End of If structure].
+9)If PTR!=NULL,then:
+  Set PREV[PTR]:=NODE.
+  [End of If structure].
+10)Exit.     
+
+Insertion of a node in unsorted Link List at a specified position:
+
+Insertion_Unsorted(AVAIL,START,NEXT,PREV,INFO,NODE,POS)
+1)Read POS.
+2)Set I:=1,PPTR:=NULL,PTR:=START.
+3)Repeat  steps 4,5  While PTR!=NULL && I<POS:
+4)Set PPTR:=PTR.
+5)Set PTR:=NEXT[PTR],I:=I+1.
+ [End of step 3 loop].
+6)If POS!=I,then:
+  Write Invalid position and Return.
+  [End of if structure].
+7)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+8)Set NODE:=AVAIL,AVAIL:=NEXT[AVAIL].
+9)Set NEXT[NODE]:=PTR,PREV[NODE]:=PPTR.
+10)If PPTR=NULL,then:
+  Set START:=NODE.
+  Else:
+  Set NEXT[PPTR]:=NODE.
+  [End of If structure].
+11)If PTR!=NULL,then:
+  Set PREV[PTR]:=NODE.
+  [End of If structure].
+12)Exit.
+
+
+
+Deletion of  a node from link list:
+
+Note:
+        1)check for under flow (is link list empty)
+                   START=NULL
+
+        2)nOW FIND THE NODE TO BE DELETED BY GIVEN PROCESS
+
+        3)AND GIVE THE DELETED NODE TO AVAIL
+       (TO RAM)  (FREE FUNCTION WORKING)
+
+nOTE: SIMPLY INSERT THE DELETED NODE AT STARTING OF AVAIL.
+
+
+STEP OF RELEASING A DELETED NODE:
+
+   NEXT[NODE]:=AVAIL,AVAIL:=NODE.
+ 
+INSTEAD OF NODE IT CAN BE ANY NAME LIKE: TEMP,PTR
+ 
+   NEXT[TEMP]:=AVAIL,AVAIL:=TEMP.
+
+   NEXT[PTR]:=AVAIL,AVAIL:=PTR.
+
+
+TYPES:
+1)DELETION FROM START
+2)DELETION FROM END
+3)DELETION BY SEARCHING (BY POSITION)
+
+Deletion_Start(START,AVAIL,NEXT,PREV,NODE)
+1)If START=NULL,then:
+  Write Undeflow and Return.
+  [End of If structure].
+2)Set NODE:=START.
+3)Set START:=NEXT[START].
+4)If START!=NULL,then:
+   Set PREV[START]:=NULL.
+  [End of If structure].
+5)Set NEXT[NODE]:=AVAIL,AVAIL:=NODE.
+6)Exit.
+
+Deletion_End(START,AVAIL,NEXT,PREV)
+1)If START=NULL,then:
+  Write Undeflow and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=START.
+3)Repeat steps  4,5  While NEXT[PTR]!=NULL:
+4)Set PPTR:=PTR.
+5)Set PTR:=NEXT[PTR].
+  [End of step 3 loop].
+6)If PPTR=NULL,then:
+  Set START:=NULL.
+  Else:
+  Set NEXT[PPTR]:=NULL.
+  [End of If structure].
+7)Set NEXT[PTR]:=AVAIL,AVAIL:=PTR. 
+8)Exit.
+
+
+
+
+          Deletion By Searching:
+Deletion_Search(START,AVAIL,NEXT,PREV,INFO,ITEM)
+1)If START=NULL,then:
+  Write Undeflow and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=START.
+3)Repeat steps 4,5  While PTR!=NULL && ITEM!=INFO[PTR]:
+4)Set PPTR:=PTR.
+5)Set PTR:=NEXT[PTR].
+  [End of step 3 loop].
+6)If PTR=NULL,then:
+  Write Node cant be deleted and Return.
+  [End of If structure].
+7)If PPTR=NULL,then:
+  Set START:=NEXT[START].
+  Else:
+  Set NEXT[PPTR]:=NEXT[PTR].
+  [End of If structure].
+8)If NEXT[PTR]!=NULL,then:
+  Set PREV[NEXT[PTR]]:=PPTR.
+  [End of If structure]. 
+9)Set NEXT[PTR]:=AVAIL,AVAIL:=PTR.
+10)Exit. 
+
+   Sorting of doubly linklist:
+
+Process:
+
+1) select first node of linklist and compare it with its
+right side nodes(i.e. from second node to last node) and swap the
+info accordingly.
+
+2) select second node of linklist and compare it with its
+right side nodes(i.e. from third node to last node) and swap the
+info accordingly.
+
+.........................
+n-1)select second last node of link list and compare it with
+its right side nodes(i.e from last node to last node) and swap
+the info accordingly.
+
+
+Note: sorting is same as of singly link list just replace the
+LINK by NEXT.
+
+
+Sorting(START,INFO,NEXT)
+1)Set PTR1:=START.
+2)Repeat steps 3 to 7  While NEXT[PTR1]!=NULL:
+3)Set PTR2:=NEXT[PTR1].
+4)Repeat steps  5,6      While PTR2!=NULL:
+5)If INFO[PTR1]>INFO[PTR2],then:
+  Set T:=INFO[PTR1],INFO[PTR1]:=INFO[PTR2],INFO[PTR2]:=T.
+  [End of if structure].
+6)Set PTR2:=NEXT[PTR2].
+  [End of step 4 loop].
+7)Set PTR1:=NEXT[PTR1].
+  [End of step 2 loop].
+8)Exit.
+
+
+             Reverse of DOUBLY link list:
+
+Process:
+   1)First assume an imginary empty link list.
+     (i.e. START1:=NULL)
+   2)Now one by one take nodes from actual link list and 
+    insert these nodes at starting of START1.
+   3)UPDATE THE START POINTER.
+   4)REPEAT THE ABOVE STEPS TILL ALL NODES ARE NOT INSERTED
+  IN THE IMAGINARY LINK LIST.
+
+Reverse_Link_List(START,START1,PTR,NEXT,PREV)
+1)Set START1:=NULL.
+2)Repeat steps  3 to 6  While START!=NULL:
+3)Set PTR:=START,START:=NEXT[START].
+4)Set NEXT[PTR]:=START1.
+5)If START1!=NULL,then:
+  Set PREV[START1]:=PTR.
+  [End of If structure].
+6)Set START1:=PTR.
+  [End of step 2 loop].
+7)Set START:=START1,PREV[START]:=NULL.
+8)Exit.
+
+
+Merging of 2 sorted doubly link list into a new link list.
+
+Here 2 sorted link lists will be given to you we have to create a new link list by the info present in the given sorted link list in 
+such a way that new link list will have all data arranged.
+
+Merging(START1,START2,START3,END,NEXT,PREV,INFO)
+1)Set START3:=NULL,END:=NULL,PTR1:=START1,PTR2:=START2.
+2)Repeat steps  3,4  While PTR1!=NULL && PTR2!=NULL:
+3)If INFO[PTR1]<INFO[PTR2],then:
+  Set ITEM:=INFO[PTR1],PTR1:=NEXT[PTR1].
+  Else:
+  Set ITEM:=INFO[PTR2],PTR2:=NEXT[PTR2].
+ [End of If structure].
+4)Call Append(START3,END,ITEM,NEXT,PREV,INFO)
+[End of step 2 loop].
+5)Repeat steps 6,7   While PTR1!=NULL:
+6)Set ITEM:=INFO[PTR1],PTR1:=NEXT[PTR1].
+7)Call Append(START3,END,ITEM,NEXT,PREV,INFO)
+ [End of step 5 loop].
+8)Repeat steps 9,10   While PTR2!=NULL:
+9)Set ITEM:=INFO[PTR2],PTR2:=NEXT[PTR2].
+10)Call Append(START3,END,ITEM,NEXT,PREV,INFO)
+ [End of step 8 loop].
+11)Set NEXT[END]:=NULL,PREV[START3]:=NULL.
+12)Exit.
+
+Append(START3,END,ITEM,NEXT,PREV,INFO)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=NEXT[AVAIL].
+3)Set INFO[NODE]:=ITEM.
+4)If START3=NULL,then:
+  Set START3:=END:=NODE.
+  Else:
+  Set NEXT[END]:=NODE,PREV[NODE]:=END,END:=NODE.
+  [End of If structure].
+5)Return.
+        POLYNOMIAL LINK LIST:
+it is 1-way link list which is used to add/multiply the 
+polnomials efficiently.
+
+Addition of polynomials consisting 1 variables:
+
+Format of a node in polynomial link list:
+
+1)COEFFICIENT WILL BE STORED
+2)POWER WILL BE STORED
+3)ADDRESS OF NEXT NODE WILL BE STORED.
+
+  1)COEFF   2) POWER  3)LINK
+
+struct Polynomial
+{
+  int coeff,power;
+struct Polynomial *link;
+};
+
+
+
+Addition of 2 polynomials and storing into third polynomial link list.
+Add_Polynomials(P1,P2,P3,END,LINK,COEFF,POWER,AVAIL)
+1)Set PTR1:=P1,PTR2:=P2,P3:=END:=NULL.
+2)Repeat steps  3,4  While PTR1!=NULL && PTR2!=NULL:
+3)If POWER[PTR1]=POWER[PTR2],then:
+  Set C:=COEFF[PTR1]+COEFF[PTR2],P:=POWER[PTR1].
+  Set PTR1:=LINK[PTR1],PTR2:=LINK[PTR2].
+  Else If POWER[PTR1]>POWER[PTR2],then::
+  Set C:=COEFF[PTR1],P:=POWER[PTR1].
+  Set PTR1:=LINK[PTR1].
+  Else
+  Set C:=COEFF[PTR2],P:=POWER[PTR2].
+  Set PTR2:=LINK[PTR2].
+  [End Of if structure].
+4)If C!=0,then:
+  Call Append(P3,END,AVAIL,COEFF,POWER,LINK,C,P).
+  [End Of if structure].
+[End of step 2 loop].
+5)Repeat steps  6,7  While PTR1!=NULL:
+6)Set C:=COEFF[PTR1],P:=POWER[PTR1].,PTR1:=LINK[PTR1].
+7)Call Append(P3,END,AVAIL,COEFF,POWER,LINK,C,P).
+[End of step 5 loop].
+7)Repeat steps  8,9  While PTR2!=NULL:
+8)Set C:=COEFF[PTR2],P:=POWER[PTR2].,PTR2:=LINK[PTR2].
+9)Call Append(P3,END,AVAIL,COEFF,POWER,LINK,C,P).
+[End of step 7 loop].
+10)Set LINK[END]:=NULL.
+11)Exit.
+Append(P3,END,AVAIL,COEFF,POWER,LINK,C,P)
+1)If AVAIL=NULL,then:
+  Write Oveflow and Return.
+  [End Of if structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)Set COEFF[NODE]:=C,POWER[NODE]:=P.
+4)If END=NULL,then:
+  Set P3:=END:=NODE.
+  Else:
+  Set LINK[END]:=NODE,END:=NODE.
+  [End Of if structure].
+5)Return.
+
+          Multiplication of 2 polynomials:
+  
+Process:
+1)first node(first term of polynomial p1) is multiplied with
+each node(all terms of polynomial p2) one by one.
+  Now we will send the result of multiplication 
+ i.e.  coefficients will  be multiplied and powers will be added
+during multiplication of 2 nodes(terms).
+  this result will be sent to append function.
+2)Append function first search the power of generated term in 
+polynomial p3 and if exists then it will add in the p3 otherwise
+1 new node(term) is created.
+
+3)second node(second term of polynomial p1) is multiplied with
+each node(all terms of polynomial p2) one by one.
+   
+and process is repeated......
+
+                        Header LINK LIST
+
+A link list in which first node stores vital/important information
+about  link list such as total node count or status of sorting
+(ascending/descending/unsorted) is known as header link list.
+
+To make algorithms of header link list just follow same algo
+of singly link list  with few changes:
+
+  1)Replace  START  BY LINK[HEAD]
+ 
+  2)AFTER INSERTING A  NODE    DO   INFO[HEAD]++
+  
+  3)AFTER DELETING  A  NODE    DO   INFO[HEAD]--
+  
+NOTE: IF INFO[HEAD] IS 0 THAN LINK LIST IS EMPTY.
+
+Traversal(HEAD,INFO,LINK)
+1)Set PTR:=LINK[HEAD].
+2)Repeat steps  3,4  While PTR!=NULL:
+3)Write INFO[PTR].
+4)Set PTR:=LINK[PTR].
+  [End of step 2 loop].
+5)Exit.
+
+Insertion_Start(HEAD,AVAIL,LINK,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)Set LINK[NODE]:=LINK[HEAD].
+4)Set LINK[HEAD]:=NODE,INFO[HEAD]:=INFO[HEAD]+1.
+5)Exit.  
+
+Insertion_End(HEAD,AVAIL,LINK,NODE)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL],LINK[NODE]:=NULL.
+3)Set PPTR:=NULL,PTR:=LINK[HEAD].
+4)Repeat steps 5,6  While PTR!=NULL:
+5)Set PPTR:=PTR.
+6)Set PTR:=LINK[PTR].
+  [End of step 4 loop].  
+7)If PPTR=NULL,then:
+  Set LINK[HEAD]=NODE.
+  Else:
+  Set LINK[PPTR]:=NODE.
+  [End of If structure].
+8)Set INFO[HEAD]:=INFO[HEAD]+1.
+9)Exit.
+
+2) 
+STRUCTURE FOR LINK LIST NODES:
+
+
+ struct singly
+ { 
+   char info;
+ struct singly *link;
+ };  
+
+
+structure for header node:
+
+ struct header
+ { 
+   int info;
+   struct singly *link;
+ };  
+ struct header *head;
+
+3) structure of header node:
+ struct header
+ { 
+   int info;
+   int status;
+   struct singly *link;
+ };  
+ struct header *head;
+      
+                CIRCULAR LINK LIST:
+
+A LINK LIST IN WHICH LAST NODE STORES THE ADDRESS OF FIRST NODE INSTEAD OF STRING NULL VALUE IS KNOWN AS CIRCULAR LINK LIST.
+
+
+APPLICATIONS:
+1) IT CAN BE USED TO TRAVERSE/DELETE ALL NODES OF LINK LIST FROM
+ANY RANDOM NODE ADDRESS.
+
+2) IT IS WIDELY USED BY EVERY OPERATING SYSTEM IN PROCESS SCHEDULING.
+   
+
+
+1)TRAVESAL OF CIRCULAR HEADER LINK LIST:
+
+Traversal(HEAD,LINK,INFO,PTR,END)
+1)If END=NULL,then: 
+  Write Empty Link list and Return.
+  [End of If structure].
+2)Set PTR:=LINK[HEAD].
+3)Write INFO[PTR].
+4)Set PTR:=LINK[PTR].
+5)If PTR!=LINK[END],then:Goto step 3.
+ [End of If structure].
+6)Exit.
+
+Traversal(HEAD,LINK,INFO,PTR,END)
+1)If END=NULL,then: 
+  Write Empty Link list and Return.
+  [End of If structure].
+2)Set PTR:=LINK[HEAD].
+3)Repeat steps 4,5  While PTR!=END:    
+4)Write INFO[PTR].
+5)Set PTR:=LINK[PTR].
+  [End of STEP 3 loop].
+6)Write INFO[PTR].
+7)Exit.
+
+INSERTION of a node in circular link list:
+1)AT START
+2)AT END
+3)AT SPECIFIED POSITION
+
+INSERTION AT START:                         
+
+Insertion_Start(HEAD,INFO,LINK,AVAIL,END)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return. 
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)If END=NULL,then:
+  Set END:=NODE.
+  Else:
+  Set LINK[NODE]:=LINK[HEAD].
+  [End of If structure].
+4)Set LINK[HEAD]:=NODE.
+5)Set LINK[END]:=NODE.
+6)Exit. 
+           
+Insertion_End(HEAD,INFO,LINK,AVAIL,END)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return. 
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)If END=NULL,then:
+  Set END:=LINK[HEAD]:=NODE.
+  Else:
+  Set LINK[NODE]:=LINK[HEAD].
+  [End of If structure].
+4)Set LINK[END]:=NODE,END:=NODE.
+5)Exit. 
+Insertion_Sorted_Circular(HEAD,INFO,LINK,AVAIL,END,ITEM)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return. 
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL],INFO[NODE]:=ITEM.
+3)Set PPTR:=NULL,PTR:=LINK[HEAD].
+4)Repeat steps 5,6 While PPTR!=END && INFO[NODE]>INFO[PTR]:
+5)Set PPTR:=PTR.
+6)Set PTR:=LINK[PTR].
+ [End of step 4 loop].
+7)If PPTR=END,then:
+   If END=NULL,then:
+    Set  LINK[HEAD]:=NODE.
+   Else
+    Set  LINK[END]:=NODE.
+  [End of If structure].
+  Set END:=NODE,LINK[NODE]:=LINK[HEAD].
+  Else If PPTR=NULL,then:
+   Set LINK[NODE]:=LINK[HEAD].
+   Set LINK[HEAD]:=NODE.
+   Set LINK[END]:=LINK[HEAD].
+  Else
+   Set LINK[PPTR]:=LINK[PTR],LINK[PTR]:=NODE.
+  [End of If structure].
+8)Set INFO[HEAD]:=INFO[HEAD]+1.
+9)Exit.      
+
+Deletion of a node from circular link list:
+1)from start
+2)from end
+3) by searching the node
+
+
+Delete_Start_Circular(HEAD,LINK,AVAIL,END)
+1)If LINK[HEAD]=NULL,then:
+  Write Underflow and Return.
+  [End of If structure].
+2)Set NODE:=LINK[HEAD].
+3)If LINK[HEAD]=END,then:
+  Set LINK[HEAD]:=NULL,END:=NULL.
+  Else:
+  Set LINK[HEAD]:=LINK[LINK[HEAD]],LINK[END]:=LINK[HEAD].
+  [End of If structure].
+4)Set LINK[NODE]:=AVAIL,AVAIL:=NODE.
+5)Set INFO[HEAD]:=INFO[HEAD]-1.
+6)Exit.
+
+Delete_End_Circular(HEAD,LINK,AVAIL,END)
+1)If LINK[HEAD]=NULL,then:
+  Write Underflow and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=LINK[HEAD].
+3)Repeat steps 4,5  While PTR!=END:
+4)Set PPTR:=PTR.
+5)Set PTR:=LINK[PTR].
+  [End of step 3 loop].
+6)If PPTR=NULL,then:
+   Set LINK[HEAD]:=NULL,END:=NULL.
+  Else:
+   Set END:=PPTR,LINK[END]:=LINK[HEAD].
+  [End of If structure].
+7)Set LINK[PTR]:=AVAIL,AVAIL:=PTR.
+8)Set INFO[HEAD]:=INFO[HEAD]-1.
+9)Exit.
+
+
+Delete_Any_Node_Circular(HEAD,LINK,AVAIL,END,INFO,ITEM)
+1)If LINK[HEAD]=NULL,then:
+  Write Underflow and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=LINK[HEAD].
+3)Repeat steps 4,5  While PPTR!=END && ITEM!=INFO[PTR]:
+4)Set PPTR:=PTR.
+5)Set PTR:=LINK[PTR].
+  [End of step 3 loop].
+6)If PPTR=END,then:
+  Write Node not found and Return.
+  Else If PPTR=NULL,then:
+   Set LINK[HEAD]:=NULL,END:=NULL.
+  Else:
+   Set LINK[PPTR]:=LINK[PTR].
+      If PTR=END,then:
+        Set END:=PPTR.
+      [End of If structure].
+  [End of If structure].
+7)Set LINK[PTR]:=AVAIL,AVAIL:=PTR.
+8)Set INFO[HEAD]:=INFO[HEAD]-1.
+9)Exit.
+ 
+Sorting(HEAD,INFO,LINK,END,PPTR)
+1)If LINK[HEAD]=NULL,then:
+  Write Empty Link list and Return.
+  [End of If structure].
+2)Set PTR1:=LINK[HEAD].
+3)Repeat steps  4 to 8   While PTR1!=END:
+4)Set PTR2:=LINK[PTR1],PPTR:=NULL.
+5)Repeat steps  6,7  While PPTR!=END:
+6)If INFO[PTR1]>INFO[PTR2],then:
+  Set T:=INFO[PTR1],INFO[PTR1]:=INFO[PTR2],INFO[PTR2]:=T.
+  [End of if structure].
+7)Set PPTR:=PTR2,PTR2:=LINK[PTR2].
+  [End of step 5 loop].
+8)Set PTR1:=LINK[PTR1].
+  [End of step 3 loop].
+9)Exit.
+   
+          do
+          {
+      If INFO[PTR1]>INFO[PTR2],then:
+       Set T:=INFO[PTR1],INFO[PTR1]:=INFO[PTR2],INFO[PTR2]:=T.
+      [End of if structure].
+      PTR2:=LINK[PTR2]. 
+          }while(PTR2!=LINK[PTR1]);
+       
+
+
+
+Searching_node_Circular(HEAD,LINK,END,INFO,ITEM)
+1)If LINK[HEAD]=NULL,then:
+  Write Empty link list and Return.
+  [End of If structure].
+2)Set PPTR:=NULL,PTR:=LINK[HEAD].
+3)Repeat steps 4,5  While PPTR!=END && ITEM!=INFO[PTR]:
+4)Set PPTR:=PTR.
+5)Set PTR:=LINK[PTR].
+  [End of step 3 loop].
+6)If PPTR=END,then:
+  Write Node not found.
+  Else:
+  Write Node found.
+  [End of If structure].
+7)Exit.
+
+same as delete_Any node till 6th step (if condition).
+
+ Reverse_Link_List(HEAD,START1,PTR,LINK,END)
+1)If LINK[HEAD]=NULL,then:
+  Write Empty link list and Return.
+  [End of If structure].
+2)Set START1:=NULL,LINK[END]:=NULL,END:=NULL.
+3)Repeat steps 4 to 7  While LINK[HEAD]!=NULL:
+4)Set PTR:=LINK[HEAD],LINK[HEAD]:=LINK[LINK[HEAD]].
+5)Set LINK[PTR]:=START1.
+6)Set START1:=PTR.
+7)If END=NULL,then:
+   Set END:=PTR.
+  [End of If structure].
+[End of step 3 loop].
+8)Set LINK[HEAD]:=START1,LINK[END]:=START1.
+9)Exit.      
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      
+
+
+
+
+
+    
+
+
+
+
+
+   
+
+
+                     STACK:
+
+-Linear DS
+-It can be implemented using Array or link list.
+-It is a data structure which follows LIFO(last in first out) policy during insertion/deletion operations.
+-In this element is inserted above the top most element and 
+during deletion, top-most element is deleted from stack.
+-It maintains a variable/pointer TOP which marks the top most 
+element index/address.
+-It is also known as PUSH-DOWN list.
+
+Applications:
+1)Function call-return mechanism is maintained by system stack.
+2)Recursive function calling is maintained by system stack.    
+3)Used for expression evaluation by system and also for expression
+conversion.
+4)used to convert recursive solution into non recursive solution.
+5)used in depth first search technique of graph...
+
+ 
+  
+Operations:
+1)PUSH - Insertion of element above the top most.
+
+2)POP- Deletion of topmost element.
+
+3)Peek- Viewing the topmost element. 
+
+Stack using array:
+  
+  Creation of empty stack:
+
+int STACK[5];
+int TOP=0;             
+                
+     using structure:
+      
+struct STACK
+{
+  int ST[5];
+  int TOP;
+};
+struct STACK S1;
+S1.TOP=0;
+
+
+         PUSH OPERATION:
+
+PROCESS:
+         1)IS STACK FULL then overflow retrun.
+             
+         2)IS stack empty then TOP:=1    [OPTIONAL STEP]
+     
+         3) TOP++.
+
+         4)INSERT THE ELEMENT AT TOP OF STACK.
+
+PUSH(STACK,TOP,MAXSIZE,ITEM)
+1)If TOP=MAXSIZE,then:
+  Write overflow and Return.
+  [End of If structure].
+2)Set TOP:=TOP+1.
+3)Set STACK[TOP]:=ITEM.
+  [Inserting ITEM above the TOP element].
+4)Exit.
+
+time is O(1)  in insertion.
+
+
+
+
+
+
+
+
+
+
+
+POP OPERATION: 
+    1)IS stack empty then UNDERFLOW AND Return
+    2)store the top most element in ITEM for printing if
+       required   [optional]
+    3)Decrease the TOP BY 1 i.e.  TOP-- 
+
+POP(STACK,TOP,ITEM)
+1)If TOP=0,then:
+  Write underflow and Return.
+  [End of IF structure].
+2)Set ITEM:=STACK[TOP].
+  [Item to be deleted is stored here].
+3)Set TOP:=TOP-1.
+4)Exit.
+
+TIME IS O(1):
+
+PEEK OPERATION: to only view the top most element.
+
+   1)Is stack empty: then no pick(top) element and rETURN.
+   2)store the peek element in ITEM AND PRINT IT.
+
+
+PEEK(STACK,TOP,ITEM)
+1)If TOP=0,then:
+  Write No peek element and Return.
+  [End of IF structure].
+2)Set ITEM:=STACK[TOP].
+3)Write ITEM.
+4)Exit.
+  
+   Expression representation and conversion using stack:
+
+Expression is a valid combination of variables,contants,operators and paranthesis.
+
+Expression can be represent in 3 ways:
+
+1)Infix notation:
+    Generally we write expression in infix form.
+  
+   syntax:       operand1  operator  operand2
+operator is placed in between operands
+
+e.g.         A+B*C-D      
+
+  NOTE: INFIX EXPRESSION IS EVALUATED(SOLVED) ACCORDING TO PRECENDENCE OF OPERATORS. SO MUCH OF THE TIME IS CONSUMED IN FINDING THE PRECEDENCE. IT TAKES MORE SPACE IF PARANTHESIS ARE
+ALSO INCLUDED.
+
+2)PREFIX(reverse polish) NOTATION:  
+  COnverted by compiler during compilation of a program.
+
+     syntax:    operator operand1 operand2  
+
+ A+B   converted into      +AB
+
+
+3)POSTFIX/polish NOTATION:     
+     syntax:    operand1 operand2 operator  
+
+ A+B   converted into      AB+
+
+Note: in prefix/postfix there is no need of finding precedence
+as expression is converted according to precedence.
+no parantheis are required.
+
+INFIX:   A+B*C-D^E   
+
+
+PREFIX:  -+A*BC^DE
+
+
+POSTFIX: ABC*+DE^-
+
+
+Q.
+INFIX:  A*(B+C-D^(G+H/K)+T)
+
+PREFIX:  *A+-+BC^D+G/HKT
+ 
+POSTFIX: ABC+DGHK/+^-T+*
+
+A*(B+C-D^(G+H/K)+T)
+A*(B+C-D^(G+[HK/])+T)
+A*(B+C-D^[GHK/+]+T)
+A*(B+C-[DGHK/+^]+T)
+A*([BC+]-[DGHK/+^]+T)
+A*([BC+DGHK/+^-]+T)
+A*[BC+DGHK/+^-T+]
+ABC+DGHK/+^-T+*
+
+         IMPLEMENTATION OF CONVERSION USING STACK:
+
+RULES:
+GIVEN: 1)INFIX EXPRESSION
+       2)STACK FOR HOLDING OPERATORS AND LEFT PARANTHESIS
+       3)STACK FOR HOLDING PREFIX OR POSTFIX EXPRESSION
+
+IN TO POST:
+PROCESS:
+ 1)SCAN THE EXPRESSION FROM LEFT TO RIGHT.
+ 2)INTIALY '(' IS ADDED IN THE BEGINING OF GIVEN STACK AND
+ a ')' IS ADDED AT THE END OF GIVEN EXPRESSION.
+ 3)IF OPERAND IS FOUND DURING INFIX SCANNING THEN
+   ADD IT TO POSTFIX DIRECTLY.
+ 4)IF '(' IS FOUND DURING INFIX SCANNING THEN
+   ADD IT TO ABOVE THE TOP OF STACK.
+ 5)IF ')' IS FOUND DURING INFIX SCANNING THEN 
+   REPEATEDLY REMOVE THE OPERATORS FROM STACK AND PUT IT IN
+  POSTFIX EXPRESSION TILL MATCHING '(' IS NOT FOUND IN THE STACK.
+  ALSO REMOVE THE '(' FROM STACK.
+ 6)IF ? (OPERATOR) IS FOUND DURING INFIX SCANNING THEN:
+  A)REPEATEDLY REMOVE THE OPERATORS FROM STACK WHOSE PRECEDENCE
+  IS HIGHER OR SAME THAN ? FOUND DURING INFIX SCANNING AND ADD      THEM TO POSTFIX. 
+  B) ADD ? TO STACK.
+
+ 
+   
+IN TO Pre:
+PROCESS:
+ 1)SCAN THE EXPRESSION FROM  RIGHT TO LEFT.
+ 2)INTIALY ')' IS ADDED IN THE BEGINING OF GIVEN STACK AND
+ a '(' IS ADDED AT THE BEGINING OF GIVEN EXPRESSION.
+ 3)IF OPERAND IS FOUND DURING INFIX SCANNING THEN
+   ADD IT TO PREFIX DIRECTLY.
+ 4)IF ')' IS FOUND DURING INFIX SCANNING THEN
+   ADD IT TO ABOVE THE TOP OF STACK.
+ 5)IF '(' IS FOUND DURING INFIX SCANNING THEN 
+   REPEATEDLY REMOVE THE OPERATORS FROM STACK AND PUT IT IN
+  PREFIX EXPRESSION TILL MATCHING ')' IS NOT FOUND IN THE STACK.
+  ALSO REMOVE THE ')' FROM STACK.
+ 6)IF ? (OPERATOR) IS FOUND DURING INFIX SCANNING THEN:
+  A)REPEATEDLY REMOVE THE OPERATORS FROM STACK WHOSE PRECEDENCE
+  IS HIGHER THAN ? FOUND DURING INFIX SCANNING AND ADD THEM TO    PREFIX. 
+  B) ADD ? TO STACK.
+ 7)AT LAST REVERSE THE PREFIX EXPRESSION.        
+
+
+NOTE: IF WE ARE NOT ADDING ( AND ) PARANTHESIS THAN STACK WILL CONTAIN SOME OPERATORS AFTER THE EXPRESSION IF TRAVERSED. SO
+WE HAVE TO POP THE STACK MANUALLY AFTER THE COMPLETE PROCESS
+AND ADD ALL THE OPERATORS IN PRE/POST FIX.
+
+
+PREFIX/POSTFIX  EXPRESSION EVALUATION(SOLVING) USING STACK:
+
+A)POSTFIX EVALUATION:
+   
+   PROCESS:
+    1)SCAN THE EXPRESSION FROM LEFT TO RIGHT TILL EXPRESSION IS NOT ENDED.
+    2)IF OPERAND IS FOUND THAN ADD IT TO STACK
+    3)IF OPERATOR IS FOUND THAN REMOVE TOP MOST ELEMENT FROM STACK AND STORE IN OP2 AND NEXT TO TOP MOST ELEMENT AND STORE IN OP1
+AND PERFORM THE OPERATION AND PUSH THE RESULT BACK INTO STACK.
+    4)AT LAST RESULT WILL STORED ON TOP OF THE STACK.
+
+B)PREFIX EVALUATION:  
+   PROCESS:
+    1)SCAN THE EXPRESSION FROM RIGHT TO LEFT TILL EXPRESSION IS NOT ENDED.
+    2)IF OPERAND IS FOUND THAN ADD IT TO STACK
+    3)IF OPERATOR IS FOUND THAN REMOVE TOP MOST ELEMENT FROM STACK AND STORE IN OP1 AND NEXT TO TOP MOST ELEMENT AND STORE IN OP2
+AND PERFORM THE OPERATION AND PUSH THE RESULT BACK INTO STACK.
+    4)AT LAST RESULT WILL STORED ON TOP OF THE STACK.
+
+
+Tower of Hanoi problem using stack:
+    Tower of hanoi is a game of disks and tower in which 3 tower
+and N disks are given and the goal is to move N-disks from a tower
+to another tower.
+
+Criteria:
+     1)3 towers  
+     2)N disks
+     3)1 disk can be moved at a time
+     4)Larger size disk cant be placed on smaller size disks.
+     5)Total moves are 2 raise to power N -1.
+
+
+Solution:
+1)Recursive solution
+2)Non Recursive solution
+
+Tower(3,BEG,AUX,END)
+
+Tower(N,BEG,AUX,END)
+1)If N=1,then:
+  Write BEG to END.
+  Return.
+  [End of If structure].
+2)[Move top N-1 disks from BEG to AUX via END]
+  Call Tower(N-1,BEG,END,AUX)
+3)Write BEG to END.
+4)[Move top N-1 disks from AUX to END via BEG]
+  Call Tower(N-1,AUX,BEG,END).  
+5)Return.
+
+
+Tower(3,BEG,AUX,END)   // MOVE FROM BEG TO END TOWER
+
+Tower(N,BEG,AUX,END,RESUME,STN,STBEG,STAUX,STEND,STRESUME,TOP)
+0)Set TOP:=0
+1)If N=1,then:
+  Write BEG to END.
+  Goto step 5.   
+  [End of If structure].
+2)[Move top N-1 disks from BEG to AUX via END]
+  Set TOP:=TOP+1,STN[TOP]:=N,STBEG[TOP]:=BEG,STAUX[TOP]:=AUX,STEND[TOP]:=END.
+  Set STRESUME[TOP]:=3.
+  Set N:=N-1,BEG:=BEG,AUX:=END,END:=AUX
+  Goto step 1.
+3) Write BEG to END.
+4) [Move top N-1 disks from AUX to END via BEG]
+  Set TOP:=TOP+1,STN[TOP]:=N,STBEG[TOP]:=BEG,STAUX[TOP]:=AUX,STEND[TOP]:=END.
+  Set STRESUME[TOP]:=5.
+  Set N:=N-1,BEG:=AUX,AUX:=BEG,END:=END.
+  Goto step 1.
+5)If TOP!=0,then:
+  a)Set N:=STN[TOP],BEG:=STBEG[TOP],AUX:=STAUX[TOP],END:=STEND[TOP],RESUME:=STRESUME[TOP]
+    TOP:=TOP-1.
+  b)If RESUME=3,then:  
+    Goto step 3
+    Else:
+    Goto step 5
+    [End of If structure].
+   [End of If structure].
+6)Exit.     
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tower(N,BEG,AUX,END,STN,STBEG,STAUX,STEND,STADD,ADD,TOP)
+0)Set TOP:=0.
+1)If N=1,then:
+  Write BEG to END.
+  Goto step 5.
+  [End of If structure].
+2)[Move top N-1 disks from BEG to AUX via END]
+  Set TOP:=TOP+1,STN[TOP]:=N,STBEG[TOP]:=BEG,STAUX[TOP]:=AUX
+  Set STEND[TOP]:=END,STADD[TOP]:=3.
+  Set N:=N-1,BEG:=BEG,AUX:=END,END:=AUX.
+  Goto step 1.
+3)Write BEG to END.
+4)[Move top N-1 disks from AUX to END via BEG]
+  Set TOP:=TOP+1,STN[TOP]:=N,STBEG[TOP]:=BEG,STAUX[TOP]:=AUX
+  Set STEND[TOP]:=END,STADD[TOP]:=5.
+  Set N:=N-1,BEG:=AUX,AUX:=BEG,END:=END.
+  Goto step 1.
+5)If TOP>0,then:
+   Set N:=STN[TOP],BEG:=STBEG[TOP],AUX:=STAUX[TOP].
+   Set END:=STEND[TOP],ADD:=STADD[TOP],TOP:=TOP-1.
+    If ADD=3,then:
+     Goto step 3.
+    Else:
+     Goto step 5.
+    [End of If structure].
+  [End of If structure].
+6)Exit. 
+
+  
+
+
+Non Recursive solution:
+
+  Converting any recursive solution into non recursive soltion
+by using stack:
+ 
+Rules:
+   1) For arguments storing different-different stack are used
+suppose 3 arguments are passed to recursive function than 3 stacks
+will be used.
+   
+   2) Internal function calling will be replaced by PUSH operation
+of stack i.e arguments will be pushed into stack before changing values.
+  
+   3)Return statement will be replaced by POP operation
+Arguments will be restored from stack and TOP will be decreased.
+
+Note: 1 extra stack will be used for storing the return line address from where function will resume execution.
+          Paranthesis matching applcation using stack in an
+     Expression:
+
+It is used to check the correct no. of paranthesis used in an
+expression and will find whether the expression if valid or not.
+
+
+Some invalid expressions are:
+    
+1)       )a+b*c-d
+
+2)      (a+b*c
+
+3)     (a+b)*(c-d
+
+4)    a+B*c-d)
+
+Note: no. of parantheis opened must be closed also
+in an expression.
+
+  
+ Process:
+ 1) Expression is scanned from left to right.
+ 2) IF left Parantheis is found than it will be inserted into stack.   
+ 3) IF right parantheis is found than:
+       a)IF stack is empty than:
+           Expression is invalid and stop
+         Else:
+           Pop the matching left parantheis
+ 
+  4)After complete expression is traversed.
+      If stack is empty:
+        Expression is valid
+      Else:
+        Expression is invalid and stop
+ 
+          Quick sort using stack non recursive 
+              Quick sort  recursive
+
+Quick sort:
+- It is based on divide and conquer techinque. i.e  breaks the array into 2 parts than process both parts
+
+- In this sorting one element known as PIVOT is found in the array
+PIVOT is an element whose left side elements are smaller and right side elements are larger.
+
+- Intially first element of array is assumed as pivot.
+
+- after finding PIVOT ELEMENT in array 
+  array is divided into 2 subarrays 
+  1)elements in first array will be all elements to the left of     pivot 
+  2)elements in second array will be all elements to the right of     pivot 
+
+
+
+
+
+
+Quick_Sort(A,STLB,STUB,TOP,N,LB,UB,PIVOT)
+1)Set TOP:=1,STLB[TOP]:=1,STUB[TOP]:=N.
+2)Repeat steps 3 to 6  While TOP>0:
+3)Set LB:=STLB[TOP],UB:=STUB[TOP],TOP:=TOP-1.
+4)Call Pivot_Finder(A,LB,UB,PIVOT).
+5)If LB<PIVOT-1,then:
+  Set TOP:=TOP+1,STLB[TOP]:=LB,STUB[TOP]:=PIVOT-1.
+  [End of If structure].
+6)If PIVOT+1<UB,then:
+  Set TOP:=TOP+1,STLB[TOP]:=PIVOT+1,STUB[TOP]:=UB.
+  [End of If structure].
+[End of step 2 loop].
+7)Exit.
+
+
+
+Pivot_Finder(A,LB,UB,PIVOT)
+1)Set LEFT:=LB,RIGHT:=UB,PIVOT:=LB.
+2)Repeat steps  3 to 8    While LEFT!=RIGHT:
+3)Repeat steps  4,5  While LEFT!=RIGHT:
+4)If A[RIGHT]<A[LEFT],then:
+   Set T:=A[LEFT],A[LEFT]:=A[RIGHT],A[RIGHT]:=T,PIVOT:=RIGHT.
+   End of loop structure. 
+  [End of If structure].
+5)Set RIGHT:=RIGHT-1.
+ [End of step 3 loop].
+6)Repeat steps  7,8  While LEFT!=RIGHT:
+7)If A[LEFT]>A[RIGHT],then:
+   Set T:=A[LEFT],A[LEFT]:=A[RIGHT],A[RIGHT]:=T,PIVOT:=LEFT.
+   End of loop structure.  
+  [End of If structure].
+8)Set LEFT:=LEFT+1.
+ [End of step 6 loop].
+[End of step 2 loop].
+9)Return. 
+
+
+
+
+
+
+
+
+QUICK SORT RECURSIVE:
+
+Quick_Sort(A,LB,UB)
+1)If LB<UB,then:
+  a)Call Pivot_Finder(A,LB,UB,PIVOT)
+  b)Call Quick_Sort(A,LB,PIVOT-1).
+  c)Call Quick_Sort(A,PIVOT+1,UB).
+  [End of If structure].
+2)Return.
+Pivot_Finder(A,LB,UB,PIVOT)
+1)Set LEFT:=LB,RIGHT:=UB,PIVOT:=LB.
+2)Repeat steps 3 to 8  While LEFT!=RIGHT:
+3)Repeat steps 4,5  While LEFT!=RIGHT:
+4)If A[RIGHT]<A[LEFT],then:
+   Set T:=A[LEFT],A[LEFT]:=A[RIGHT],A[RIGHT]:=T,PIVOT:=RIGHT.
+   Goto step 6.  
+  [End of If structure].
+5)Set RIGHT:=RIGHT-1.
+ [End of step 3 loop].
+6)Repeat steps  7,8  While LEFT!=RIGHT:
+7)If A[LEFT]>A[RIGHT],then:
+   Set T:=A[LEFT],A[LEFT]:=A[RIGHT],A[RIGHT]:=T,PIVOT:=LEFT.
+   Goto step 2.  
+  [End of If structure].
+8)Set LEFT:=LEFT+1.
+ [End of step 6 loop].
+[End of step 2 loop].
+9)Return. 
+  
+
+             stack using link list:
+
+PUSH(TOP,LINK,AVAIL)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=LINK[AVAIL].
+3)Set LINK[NODE]:=TOP.
+4)Set TOP:=NODE.
+5)Exit.
+POP(TOP,LINK,AVAIL)
+1)If TOP=NULL,then:
+  Write Underflow and Return.
+  [End of If structure].
+2)Set NODE:=TOP.
+3)Set TOP:=LINK[TOP].
+4)Set LINK[NODE]:=AVAIL,AVAIL:=NODE.
+5)Exit.
+PEEK(TOP,LINK,INFO)
+1)If TOP=NULL,then:
+  Write Underflow, Empty stack and Return.
+  [End of If structure].
+2)Write INFO[TOP].
+3)Exit.
+
+      
+                                    QUEUE
+
+- linear DS
+- It is based on fifo POLICY (first in first out).
+- it is very much similar to real life queue(line) system.
+- FIFO policy means elements are processed(deleted) in first
+come first serve basis.
+- It can be implemented by using array or link list.
+- It maintains 2 variables(pointers) , FRONT AND REAR FOR 
+INSERTION AND DELETION OPERATION.
+-O(1) TIME FOR INSERTION AND DELETION.
+
+
+
+
+
+
+
+
+
+
+APPLICATIONS OF QUEUE:
+1)Used as printing queue by printers for processing
+the printing requests which are coming over the network.
+2)used by file servers in a network for giving access to files.
+3)used by every operating system to schedule(execute) the process
+known as processing queue of CPU. 
+4)used in breadth first search techinque of graph,topological sorting of graph, level order traversal of graph.
+
+
+
+
+
+
+
+
+
+
+
+
+TYPES OF QUEUE:
+1)LINEAR QUEUE(LQ)
+2)CIRCULAR QUEUE(CQ)
+3)PRIORITY QUEUE(PQ)
+4)DOUBLE ENDED QUEUE (DQ)
+5)MULTI/MULTIPLE QUEUE (MQ)
+
+Linear queue:
+  - It is a queue in which elements are processed only in forward direction.
+  - linear queue faces a problem of max. overflow even if queue is having space to store
+new data because if element is stored at last index of queue than it cant insert
+after the last index.
+
+Insertion                                         Deletion  
+(Enqueue)		                         (Dequeue)
+ operation                                        operation
+
+
+Insertion_LQ(LQ,ITEM,FRONT,REAR,SIZE)
+1)If REAR=SIZE,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)If FRONT=0,then:
+   Set FRONT:=REAR:=1.
+  Else:
+   Set REAR:=REAR+1.
+  [End of If structure].
+3)Set LQ[REAR]:=ITEM.
+4)Exit.
+
+Deletion_LQ(LQ,ITEM,FRONT,REAR)
+1)If FRONT=0,then:
+  Write Underflow and Return.
+  [End of If structure].
+2)Set ITEM:=LQ[FRONT].
+  [Item to be deleted is stored here].
+3)If FRONT=REAR,then:
+    Set FRONT:=REAR:=0.
+  Else:
+    Set FRONT:=FRONT+1.
+  [End of If structure].
+4)Exit.
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERTION IS KNOWN AS ENQUEUE OPERATION:
+DELETION  IS KNOWN AS DEQUEUE OPERATION:
+
+1)LINEAR QUEUE(LQ)
+   IT INSERTS THE ELEMENTS ONLY IN FORWARD DIRECTION.
+   DUE TO WHICH IT SUFFERS WITH MAX. OVERFLOW PROBLEM.
+
+  INSERTION:
+          IT  WILL BE DONE AT REAR INDEX OF LINEAR QUEUE.
+
+INSERTION_LINEAR_QUEUE(LQ,ITEM,FRONT,REAR,SIZE)
+1)If REAR=SIZE,then:
+  Write Overflow and Return.
+  Else If FRONT=0,then:
+  Set FRONT:=REAR:=1.
+  Else:
+  Set REAR:=REAR+1.
+  [End of If struture].
+2)Set LQ[REAR]:=ITEM.
+3)Exit.
+
+
+
+
+
+TIME WILL BE O(1) DUE TO NO SHIFTING(NO LOOPS)
+
+DELETION_LINEAR_QUEUE(LQ,ITEM,FRONT,REAR)
+1)If FRONT=0,then:
+  Write Underflow and Return.
+  [End of If struture].
+2)Set ITEM:=LQ[FRONT].
+  [Item to be deleted is stored here].
+3)If FRONT=REAR,then:
+  Set FRONT:=REAR:=0.
+  Else:
+  Set FRONT:=FRONT+1.
+  [End of If struture].
+4)Exit.
+
+TIME WILL BE O(1) DUE TO NO SHIFTING(NO LOOPS)
+
+PROBLEM OF LINEAR QUEUE:
+   IT CANT INSERT THE ELEMENTS EVEN IF SPACE IS FREE IF REAR
+WILL BE POINTING TO MAXSIZE than IT CANT UTILIZE THE SPACE FREE
+BEFORE THE FRONT OF LINEAR QUEUE.
+
+
+solution:
+1)By Compaction:
+  Shifting the elements of queue to left side 
+but it involves N unit of time in shifting so this process is not effective
+
+2)By using circular queue:
+   no need of shifting of elements so time will remain
+   O(1) for insertion and deletion.
+
+
+
+
+
+INSERTION_CIRCULAR_QUEUE(CQ,ITEM,FRONT,REAR,SIZE)
+1)If FRONT=1 && REAR=SIZE || FRONT=REAR+1,then:
+  Write Overflow and Return.
+  Else If FRONT=0,then:
+  Set FRONT:=REAR:=1.
+  Else If REAR=SIZE,then:
+  Set REAR:=1.
+  Else:
+  Set REAR:=REAR+1.
+  [End of If struture].
+2)Set CQ[REAR]:=ITEM.
+3)Exit.
+TIME WILL BE O(1) DUE TO NO SHIFTING(NO LOOPS)
+
+DELETION_CIRCULAR_QUEUE(CQ,ITEM,FRONT,REAR,SIZE)
+1)If FRONT=0,then:
+  Write Underflow and Return.
+  [End of If struture].
+2)Set ITEM:=CQ[FRONT].
+  [Item to be deleted is stored here].
+3)If FRONT=REAR,then:
+  Set FRONT:=REAR:=0.
+  Else If FRONT=SIZE,then:
+  Set FRONT:=1.   
+  Else:
+  Set FRONT:=FRONT+1.
+  [End of If struture].
+4)Exit.
+
+    
+
+Priority Queue:
+    In this type of queue elements are processed according to
+priorties.
+    high priority elements are deleted first then low priority
+elements.
+   same priority elements are process in first come first serve
+basis.
+
+   It is created by using various circular queues with priority numbers assigned on every queue. 
+
+   Insertion and deletion are same as circular queue except one
+difference first we have to find the priority number than insertion takes place in that number circular queue and
+for deletion we have to delete the elements from high priority queue first then low priority queue.
+
+
+Given:
+     P  is is priority number as well as queue number
+    (row number of 2-d arrray)
+    MAXP  is highest available priority 
+     (total rows in 2-d array)
+    SIZE is total elements that can be stored in every queue
+     (total columns in 2-d array)
+
+During insertion  :
+   -first scan the value of P 
+   -check it whether it is valid or not.
+   - if valid than just follow circular queue insertion afterwards
+
+   replace FRONT BY FRONT[P]
+           REAR  BY  REAR[P]
+           CQ    BY    PQ[P] 
+
+Insertion_Priority_Queue(PQ,FRONT,REAR,P,MAXP,ITEM,SIZE)
+1)Read P.
+2)If P<1||P>MAXP,then:
+  Write Such a priority doesnt exist And Return.
+  [End of If structure].
+3)If FRONT[P]=1 && REAR[P]=SIZE || FRONT[P]=REAR[P]+1,then:
+  Write Overflow and Return.
+  Else If FRONT[P]=0,then:
+  Set FRONT[P]:=REAR[P]:=1.
+  Else If REAR[P]=SIZE,then:
+  Set REAR[P]:=1.
+  Else:
+  Set REAR[P]:=REAR[P]+1.
+  [End of If structure].
+4)Set PQ[P][REAR[P]]:=ITEM.
+5)Exit.
+
+
+
+During DELETION :
+    -fIRST OF ALL WE HAVE TO FIND FIRST NON EMPTY PRIORITY 
+       QUEUE.(I.E. HIGH PRIORITY QUEUE ELEMENTS WILL BE DELETED         FIRST)
+    - IF ALL THE QUEUES ARE EMPTY THAN UNDERFLOW
+      OTHERWISE  PERFORM NORMAL CIRCULAR QUEUE DELETION 
+      FROM THAT HIGHEST PRIORITY NON EMPTY QUEUE.
+      
+   - replace  FRONT BY FRONT[P]
+              REAR BY REAR[P]
+              CQ    BY PQ[P]
+   ITEM:=CQ[FRONT]    WILL BE CONVERTED INTO  
+                                   ITEM:=PQ[P][FRONT[P]]
+               
+   
+Deletion_Priority_Queue(PQ,FRONT,REAR,P,MAXP,ITEM,SIZE)
+1)Set P:=1.
+2)Repeat step 3  While P<=MAXP && FRONT[P]=0:
+3)Set P:=P+1.
+  [End of step2 loop].
+4)If P>MAXP,then:
+  Write Underflow and Return.
+  [End of If structure].
+5)Set ITEM:=PQ[P][FRONT[P]].
+  [ITem to be deleted is stored here].
+6)If FRONT[P]=REAR[P],then:
+  Set FRONT[P]:=REAR[P]:=0.
+  Else If FRONT[P]=SIZE,then:
+  Set FRONT[P]:=1.   
+  Else:
+  Set FRONT[P]:=FRONT[P]+1.
+  [End of If struture].
+7)Exit.     
+ 
+                       DOUBLE ENDED QUEUE:
+
+-It is a special type of queue in which elements can be inserted and deleted from both ends of queue but not from middle.
+
+-It is used by some of the intel processors for reducing the 
+waiting time of processes.
+
+(it can be assumed as a lift with 2 side opening in which
+persons can enter from both sides but not from middle)
+
+- it maintains 2 variable LEFT AND RIGHT instead of FRONT AND REAR.
+
+- IT FOLLOWS APPROACH OF CIRCULAR QUEUE.
+  
+2 types of double ended queue:
+  a)Input restricted:
+       Insertion can be done from 1 end but deletion from
+       both ends.
+  b)Output restricted:
+       Insertion can be done from both end but deletion from
+       1 end only.
+
+intially left and right will be 0 i.e. empty queue
+
+1)insertion_left:
+                  anticlockwise insertion
+
+2)insertion_right:
+                  clockwise insertion
+
+3)deletion_left:
+                   clockwise deletion
+  
+4)deletion_right:
+                   anticlockwise deletion
+    
+Insertion_Left_DoubleEnded(DQ,LEFT,RIGHT,SIZE,ITEM)
+1)If LEFT=1&& RIGHT=SIZE || LEFT=RIGHT+1,then:
+  Write Overflow and Return.
+  Else If LEFT=0,then:
+  Set LEFT:=RIGHT:=SIZE.
+  Else If LEFT=1,then:
+  Set LEFT:=SIZE.
+  Else
+  Set LEFT:=LEFT-1.
+  [End of If structure].
+2)Set DQ[LEFT]:=ITEM.
+3)Exit.
+Insertion_Right_DoubleEnded(DQ,LEFT,RIGHT,SIZE,ITEM)
+1)If LEFT=1&& RIGHT=SIZE || LEFT=RIGHT+1,then:
+  Write Overflow and Return.
+  Else If RIGHT=0,then:
+  Set LEFT:=RIGHT:=1.
+  Else If RIGHT=SIZE,then:
+  Set RIGHT:=1.
+  Else
+  Set RIGHT:=RIGHT+1.
+  [End of If structure].
+2)Set DQ[RIGHT]:=ITEM.
+3)Exit.
+  
+Deletion_Left_DoubleEnded(DQ,LEFT,RIGHT,SIZE,ITEM)
+1)If LEFT=0,then:
+  Write Underflow and Return.
+  [End of If structure].
+2) Set ITEM:=DQ[LEFT].
+  [Item to be deleted is stored here].
+3)If LEFT=RIGHT,then:
+   Set LEFT:=RIGHT:=0.
+  Else If LEFT=SIZE,then:
+  Set LEFT:=1.
+  Else
+  Set LEFT:=LEFT+1.
+  [End of If structure].
+4)Exit.
+Deletion_Right_DoubleEnded(DQ,LEFT,RIGHT,SIZE,ITEM)
+1)If RIGHT=0,then:
+  Write Underflow and Return.
+2)Set ITEM:=DQ[RIGHT].
+  [Item to be deleted is stored here].
+3)If RIGHT=LEFT,then:
+  Set LEFT:=RIGHT:=0.
+  Else If RIGHT=1,then:
+  Set RIGHT:=SIZE.
+  Else
+  Set RIGHT:=RIGHT-1.
+  [End of If structure].
+4)Exit.
+
+                 MULTI(MULTIPLE) QUEUE:
+-WHEN 2 LINEAR QUEUES ARE PLACED BACK TO BACK(JOINED TOGETHER) TO 
+FORM A SINGLE QUEUE THAN IT IS KNOWN AS MULTI QUEUE.
+
+-tHESE 2 QUEUES ARE USED TO STORE/delete THE DATA CONCURRENTLY.
+i.e. we can store 2 data at the same time 
+    as well as delete them.
+
+- these queue can borrow space from each other if one of the queue
+is full and other is not full.
+this can minimize the overflow and load is balanced.
+
+- here 2 front and 2 rear are maintained
+- front1 and rear1 are used for first queue that process data
+from left to right and front2 and rear2 are used for second queue that process the data from right to left.
+
+Insert_leftQueue(MQ,FRONT1,REAR1,REAR2,ITEM)
+1)If REAR2=REAR1+1,then:
+  Write Overflow and Return.
+  Else If FRONT1=0,then:
+  Set FRONT1:=REAR1:=1.
+  Else
+  Set REAR1:=REAR1+1.
+  [End of If structure].
+2)Set MQ[REAR1]:=ITEM.
+3)Exit.
+Insert_rightQueue(MQ,FRONT2,REAR2,REAR1,ITEM,SIZE)
+1)If REAR2=REAR1+1,then:
+  Write Overflow and Return.
+  Else If FRONT2=SIZE+1,then:
+  Set FRONT2:=REAR2:=SIZE.
+  Else
+  Set REAR2:=REAR2-1.
+  [End of If structure].
+2)Set MQ[REAR2]:=ITEM.
+3)Exit.  
+Delete_leftQueue(MQ,FRONT1,REAR1,ITEM)
+1)If FRONT1=0,then:
+  Write Underflow and Return.
+2)Set ITEM:=MQ[FRONT1].
+  [Item to be deleted is stored here]. 
+3)If FRONT1=REAR1,then:
+  Set FRONT1:=REAR1:=0.
+  Else:
+  Set FRONT1:=FRONT1+1.
+  [End of If structure].
+4)Exit.
+Delete_rightQueue(MQ,FRONT2,REAR2,SIZE,ITEM)
+1)If FRONT2=SIZE+1,then:
+  Write Underflow and Return.
+2)Set ITEM:=MQ[FRONT2].
+  [Item to be deleted is stored here]. 
+3)If FRONT2=REAR2,then:
+  Set FRONT2:=REAR2:=SIZE+1.
+  Else:
+  Set FRONT2:=FRONT2-1.
+  [End of If structure].
+4)Exit.
+ 
+
+
+                          TREE:
+
+-NON LINEAR DATA STRUCTURE.
+
+-IT IS A COLLECTION OF NODES WHICH ARE ARRANGED IN HIERARCHICAL
+MANNER.(PARENT CHILD RELATIONSHIP)
+
+-IT IMPLEMENTED BY USING LINK LISTS(doubly link lists).
+
+                                 APPLICATIONS OF TREE:
+
+1)Tree is widely used in implementing the directory structure
+(file system) of operating system.
+ as files cant be stored linearly in the secondary storage (array cant be used we already know that and link list suffers a problem of inefficient searching since binary search is not available)
+     
+2) used in searching a file in operating systems from file allocation table.
+
+3) used to create computer networks which forms tree topology.
+
+4) used in efficient sorting of array elements as heap sort
+
+5) used by every compiler to create the expression(parse) tree for every expression while converting the program into tokens.
+
+6) used for data file compression and decompression
+like compression of files done by winzip/winrar softwares.
+
+                   Tree terminologies: 
+
+1)Binary tree:
+  IT is  a collection of nodes arranged in parent child relationship where each node can have atmost 2 child nodes.
+Very first node of tree is known an ROOT node.
+   
+  IT is used in heap sorting of array.
+
+2)ROOT:FIRST NODE OF TREE IS KNOWN AS ROOT NODE. AND THIS NODE WILL NOT HAVE ANY PARENT NODE.(STARTING NODE)
+
+3)LEFT  CHILD: THE NODE AT THE LEFT SIDE OF ANY PARENT NODE
+4)RIGHT CHILD: THE NODE AT THE RIGHT SIDE OF ANY PARENT NODE
+5)LEAF  NODE: A NODE WITHOUT ANY CHILD NODES
+    (i.e. whose left right links are null)
+6)DEGREE OF A NODE:  
+  TOTAL NUMBER OF CHILDS FOR A NODE IS KNOWN AS DEGREE OF NODE.
+  
+  
+NOTE: NODE WITH 0 DEGREE IS KNOWN AS LEAF NODE
+  
+7)DEGREE OF TREE:
+  A NODE HAVING HIGHEST DEGREE IS THE DEGREE OF TREE.
+ 
+8)HEIGHT/DEPTH OF TREE: 
+     MAX CHILD WHICH ARE CONTAINED BY LONGEST BRANCH OF TREE IS
+KNOWN AS HEIGHT OF TREE.
+   IT IS ALSO EQUIVALENT TO MAXLEVEL+1 
+
+NOTE: ROOT NODE STARTS WITH LEVEL 0
+      CHILD OF ROOT NODES ARE AT LEVEL 1
+     AND THIS CONTINUES.
+
+
+IMPLEMENTATION(CREATION) OF STRICT BINARY TREE:
+  A BINARY TREE IS SAID TO BE STRICT IF NODES ARE INSERTED LEVEL BY LEVEL FROM LEFT TO RIGHT.
+
+
+  a)using doubly link list
+  b)using array (in algo)
+
+
+2)Binary search tree(BST):
+  It is a binary tree which follows 2 properties:
+  a) Smaller elements are stored at left side of a node.
+  b) larger or same elements are stored at right side of a node.
+
+It is widely used in Searching techiniqes(Binary search)
+
+  Create a BST with follwing values:
+
+100,456,567,120,34,56,99,10,34,45
+
+  Create a BST with follwing values:
+
+  R,U,A,F,X,C,D,K,L,Z
+
+
+
+
+
+
+
+3)HUFFMAN TREE AND HUFFMAN ENCODING:
+ IT IS A BINARY TREE AND IT IS USED IN DATA COMPRESSION TECHNIQUES
+LIKE USED BY WINZIP/WINRAR SOFTWARES TO COMPRESS/DECOMPRESS DATA
+FILES.
+
+HUFFMAN ENCODING: IT IS A PROCESS OF ASSIGNING NEW CODES TO
+DATA AFTER COMPRESSION TO REDUCE THE SIZE OF FILE.
+
+PROCESS OF CREATING HUFFMAN TREE:
+
+GIVEN:
+DATA FILE CONSISTING OF FOLLOWING SYMBOLS:
+ SYMBOL     FREQUENCY(NO. OF TIMES REPEATED)
+  A            40                               
+  Z            20
+  P            17
+  Q            11
+  X            8
+  N            4
+  S            2
+  L            2
+  G            8
+  B	       1 
+STEPS:
+1)FIRST OF ALL ARRANGE THE SYMBOLS IN INCREASING ORDER OF THIER
+FREQUENCIES.
+2)NOW TAKE 2 SMALLEST FREQUENCY SYMBOLS AND CREATE
+  2 NODES WITH THEM INSERT THIER SUM OF FREQUENCIES AS THIER PARENT NODE AND SMALLER NODE AS LEFT CHILD AND LARGER NODE AS RIGHT CHILD.
+3) REPEAT THE ABOVE STEPS TILL ALL NODES ARE NOT INCLUDED.
+   B    1
+   S    2
+   L    2
+   N    4
+   G    8
+   X    8
+   Q   11
+   P   17
+   Z   20
+   A   40
+ 
+
+
+RIGHT NOW ABOVE FILE IS OF 113 BYTES I.E PER SYMBOL 1 BYTE
+EACH SYMBOL WILL TAKE 8 BITS CODE.
+    
+nOW AFTER HUFFMAN TREE CREATION WE WILL ASSIGN BITS 0 AND 1
+ A) ASSIGN 0 TO LEFT CHILD
+ B) ASSIGN 1 TO RIGHT CHILD
+
+    
+3)EQUATION /EXPRESSION TREE:
+IT IS A BINARY TREE WHICH IS USED BY COMPILER DURING
+THE SYNTAX ANALSIS PHASE OF COMPILATION TO CHECK THE EXPRESSIONS VALIDITY.....THE TREE IS KNOWN AS PARSE TREE OR EXPRESSION TREE.
+
+RULE:
+  1)OPERATOR WILL BE INSERTED AS PARENT NODE.
+  2)OPERAND WILL BE INSERTED AS LEFT AND RIGHT CHILD.
+
+INFIX:
+INFIX:    (A+B)^C-D*(E+F)
+PREFIX:   -^+ABC*D+EF 
+POSTFIX:  AB+C^DEF+*-    
+
+EXPRESSION TREE CREATION BY COMPILER USING PREFIX/POSTFIX:
+RULE:POSTFIX:
+  1) EXPERSSION IS TRAVERSED FROM L TO R
+  2) IF OPERAND IS FOUND THAN MAKE A LEAF NODE AND PUSH IT ON 
+     STACK.
+  3) IF OPERATOR IS FOUND THAN REMOVE 2 TOP MOST LEAF NODES AND
+     CREATE ONE PARENT NODE WHOSE RIGHT CHILD WILL BE TOP MOST LEAF AND LEFT CHILD WILL NEXT TO TOP MOST LEAF NODE.
+NOW PUSH THIS PARENT NODE ONTO STACK.
+
+
+RULE:PREFIX:
+  1) EXPERSSION IS TRAVERSED FROM R TO L
+  2) IF OPERAND IS FOUND THAN MAKE A LEAF NODE AND PUSH IT ON 
+     STACK.
+  3) IF OPERATOR IS FOUND THAN REMOVE 2 TOP MOST LEAF NODES AND
+     CREATE ONE PARENT NODE WHOSE LEFT CHILD WILL BE TOP MOST LEAF AND RIGHT CHILD WILL NEXT TO TOP MOST LEAF NODE.
+NOW PUSH THIS PARENT NODE ONTO STACK.
+
+OPERATIONS ON BST(BINARY SEARCH TREE)
+ 1)INSERTION OF A NODE(CREATION)
+ 2)TRAVERSAL OF BST NODES
+ 3)DELETION OF A NODE FROM BST
+ 4)SEARCHING A NODE IN BST
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERTION:
+1)  SMALLER NODES WILL BE INSERTED AS LEFT CHILD
+    AND LARGER OR EQUAL NODE WILL BE INSERTED AS RIGHT CHILD
+
+2)  FOR INSERTION FIND THE PARENT NODE LOCATION THAN
+    INSERT THE ITEM AS LEFT OR RIGHT CHILD
+
+3) INTIALLY TREE WILL BE EMPTY (ROOT WILL BE NULL)
+   SO JUST CREATE FIRST NODE IN THAT CASE OTHERWISE
+SEARCH FOR THE PARENT NODE OF THE NODE TO BE INSERTED
+
+GIVEN: ROOT
+       PAR
+       PTR
+
+CREATE A BST WITH FOLLOWING NODES:
+     90,45,500,12,3,54,199,178
+
+Insertion_BST(ROOT,AVAIL,INFO,LEFT,RIGHT)
+1)If AVAIL=NULL,then:
+  Write Overflow and Return.
+  [End of If structure].
+2)Set NODE:=AVAIL,AVAIL:=RIGHT[AVAIL],LEFT[NODE]:=NULL,
+  Set RIGHT[NODE]:=NULL.
+3)Set PTR:=ROOT,PAR:=NULL.
+4)Repeat steps 5,6 While PTR!=NULL:
+5)Set PAR:=PTR.
+6)If INFO[NODE]<INFO[PTR],then:
+  Set PTR:=LEFT[PTR].
+  Else
+  Set PTR:=RIGHT[PTR].
+  [End of If structure].
+ [End of step 4 loop].
+7)If ROOT=NULL,then:
+   Set ROOT:=NODE.
+  Else If INFO[NODE]<INFO[PAR],then:
+   Set LEFT[PAR]:=NODE.
+  Else:
+   Set RIGHT[PAR]:=NODE.
+  [End of If structure].
+8)Exit
+
+              TRAVERSAL OF TREE:
+THERE ARE VARIOUS ORDERS IM WHICH A BINARY TREE CAN BE TRAVERSED.
+1)LEVEL BY LEVEL TRAVERSAL:
+     NODES OF TREE ARE TRAVERSED LEVEL BY LEVEL FROM LEFT TO RIGHT
+     CHILD.
+
+  HERE QUEUE WILL BE USED FOR THE TRAVERSAL.
+  INTIALLY ROOT NODE IS STORE IN THE QUEUE.
+  THEN ROOT NODE IS PRCESSED AND FIRST ITS LEFT CHILD IS INSERTED   
+IF EXISTS THAN ITS RIGHT CHILD IS INSERTED IF EXITS. 
+ ABOVE STEP4 IS REPEATED TILL THE QUEUE IS NOT EMPTY.
+
+
+
+
+
+
+
+
+
+
+
+Level_By_Level_Traversal(ROOT,QUEUE,FRONT,REAR,INFO,LEFT,RIGHT)
+1)If ROOT=NULL,then:
+  Write Empty tree and Return.
+  [End of If structure].
+2)Set FRONT:=1,REAR:=1,QUEUE[REAR]:=ROOT.
+3)Repeat steps 4 to 8  While FRONT<=REAR:
+4)Set NODE:=QUEUE[FRONT].
+5)If LEFT[NODE]!=NULL,then:
+  Set REAR:=REAR+1,QUEUE[REAR]:=LEFT[NODE].
+  [End of If structure].
+6)If RIGHT[NODE]!=NULL,then:
+  Set REAR:=REAR+1,QUEUE[REAR]:=RIGHT[NODE].
+  [End of If structure].
+7)Set FRONT:=FRONT+1.
+8)Write INFO[NODE].
+  [End of step 3 loop].
+9)Exit.  
+
+
+2) PREORDER TRAVERSAL OF TREE:
+   order of processing of nodes :
+   ROOT,LEFT,RIGHT
+3) INORDER TRAVERSAL OF TREE:
+   order of processing of nodes :
+   LEFT,ROOT,RIGHT
+4) POSTORDER TRAVERSAL OF TREE:
+   order of processing of nodes :
+   LEFT,RIGHT,ROOT
+
+Preorder(PTR,LEFT,RIGHT,INFO)
+1)If PTR!=NULL,then:
+  a)Write INFO[PTR].
+  b)Call Preorder(LEFT[PTR],LEFT,RIGHT,INFO)
+  c)Call Preorder(RIGHT[PTR],LEFT,RIGHT,INFO)
+  [End of IF structure].
+2)Return.
+Inorder(PTR,LEFT,RIGHT,INFO)
+1)If PTR!=NULL,then:
+  a)Call Inorder(LEFT[PTR],LEFT,RIGHT,INFO) 
+  b)Write INFO[PTR].
+  c)Call Inorder(RIGHT[PTR],LEFT,RIGHT,INFO)
+  [End of IF structure].
+2)Return.
+Postorder(PTR,LEFT,RIGHT,INFO)
+1)If PTR!=NULL,then:
+  a)Call Postorder(LEFT[PTR],LEFT,RIGHT,INFO)
+  b)Call Postorder(RIGHT[PTR],LEFT,RIGHT,INFO)
+  c)Write INFO[PTR].
+  [End of IF structure].
+2)Return.   
+
+        Preorder using stack:
+Rules:
+   1)In this method a pointer is started with root.
+   2)this pointer is  moved on left side of root continuously
+   with printing of nodes and it store the address of right nodes
+   in the stack untill it reaches to dead end(NULL value).
+   
+   3)After reaching to dead end this pointer restores itself from
+    stack top address and top is decreased and repeats the step 2.
+   
+    If stack is empty then process stops.
+
+
+
+Note: Intially NULL is stored on the TOP of stack.
+Preorder_Using_Stack(STACK,TOP,ROOT,LEFT,RIGHT,INFO)
+1)If ROOT=NULL,then:
+  Write Empty Tree and Return.
+  [End of IF structure].
+2)Set PTR:=ROOT,TOP:=1,STACK[TOP]:=NULL.
+3)Repeat steps 4 to 8   While TOP>0:
+4)Repeat steps  5,6,7  While PTR!=NULL:
+5)Write INFO[PTR].
+6)If RIGHT[PTR]!=NULL,then:
+  Set TOP:=TOP+1,STACK[TOP]:=RIGHT[PTR].
+  [End of IF structure].
+7)Set PTR:=LEFT[PTR].
+  [End of step 4 loop].
+8)Set PTR:=STACK[TOP],TOP:=TOP-1.
+  [End of step 3 loop].
+9)Exit. 
+  
+
+
+
+
+
+
+
+
+Inorder using stack:
+Rules:
+   1)In this method a pointer is started with root.
+   2)this pointer is  moved on left side of root continuously
+   and it store the address of left side nodes in the stack untill    it reaches to dead end(NULL value).
+   
+   3)After reaching to dead end this pointer restores itself from
+    stack top address and prints it  moves to right side of
+    popped address and top is decreased and repeats the step 2.
+   
+    If stack is empty then process stops.
+Inorder_Using_Stack(STACK,TOP,ROOT,LEFT,RIGHT,INFO)
+1)If ROOT=NULL,then:
+  Write Empty Tree and Return.
+  [End of IF structure].
+2)Set PTR:=ROOT,TOP:=1,STACK[TOP]:=NULL.
+3)Repeat steps 4 to 8  While TOP>0:
+4)Repeat steps 5,6  While PTR!=NULL:
+5)Set TOP:=TOP+1,STACK[TOP]:=PTR.
+6)Set PTR:=LEFT[PTR].
+  [End of step 4 loop].
+7)Set PTR:=STACK[TOP],TOP:=TOP-1.
+8)If PTR!=NULL,then:
+  Write INFO[PTR].
+  Set PTR:=RIGHT[PTR].
+  [End of IF structure].
+  [End of step 3 loop].
+9)Exit. 
+
+      
+
+
+
+      POSTOrder using stack:
+
+Rules:
+   1)In this traversal Pointer is moving at the left side 
+and is stored in stack ,after that if its right child exists
+than it is also stored as special node in stack.
+   (for special node we can use flag variable(minus sign))
+  (right node is special since it is also a subroot so before this node its left and right child must be processed)
+  
+  2)when pointer reaches to dead end pointer is restored from
+stack and node is printed if pointer is not storing special node
+otherwise step1 is repeated if special node is popped.
+   (we have to remove the special status)
+
+PostOrder_Using_Stack(STACK,TOP,INFO,LEFT,RIGHT,ROOT)
+1)If ROOT=NULL,then:
+  Write Empty Tree and Return.
+  [End of IF structure].
+2)Set PTR:=ROOT,TOP:=1,STACK[TOP]:=NULL. 
+3)Repeat steps 4 to 10   While TOP>0:
+4)Repeat steps 5,6,7  While PTR!=NULL:
+5)Set TOP:=TOP+1,STACK[TOP]:=PTR.
+6)If RIGHT[PTR]!=NULL,then:
+  Set TOP:=TOP+1,STACK[TOP]:=-RIGHT[PTR].
+  [End of IF structure].
+7)Set PTR:=LEFT[PTR].
+  [End of step 4 loop].
+8)Set PTR:=STACK[TOP],TOP:=TOP-1.
+9)IF PTR!=NULL,then:
+   If PTR<0,then:
+     Set PTR:=-PTR
+   Else:
+     Write INFO[PTR].
+     Goto step 8. 
+  [End of IF structure].
+ [End of step 3 loop].
+10)Exit.
+             
+PostOrder_Using_Stack(STACK,TOP,INFO,LEFT,RIGHT,ROOT)
+1)If ROOT=NULL,then:
+  Write Empty Tree and Return.
+  [End of IF structure].
+2)Set PTR:=ROOT,TOP:=1,STACK[TOP]:=NULL. 
+3)Repeat steps 4 to 10   While TOP>0:
+4)Repeat steps 5,6,7  While PTR!=NULL:
+5)Set TOP:=TOP+1,STACK[TOP]:=PTR.
+6)If RIGHT[PTR]!=NULL,then:
+  Set TOP:=TOP+1,STACK[TOP]:=-RIGHT[PTR].
+  [End of IF structure].
+7)Set PTR:=LEFT[PTR].
+  [End of step 4 loop].
+8)Repeat steps 9,10   While TOP>0:
+9)Set PTR:=STACK[TOP],TOP:=TOP-1.
+10)IF PTR!=NULL,then:
+    If PTR<0,then:
+     Set PTR:=-PTR,End of loop structure
+    Else:
+     Write INFO[PTR]. 
+  [End of IF structure].
+ [End of step 8 loop].
+[End of step 3 loop].
+11s)Exit.
+
+
+
+
+    OR
+ 
+PostOrder_Using_Stack(STACK,TOP,INFO,LEFT,RIGHT,ROOT)
+1)If ROOT=NULL,then:
+  Write Empty Tree and Return.
+  [End of IF structure].
+2)Set PTR:=ROOT,TOP:=1,STACK[TOP]:=NULL. 
+3)Repeat steps 4 to 11   While TOP>0:
+4)Repeat steps 5,6,7  While PTR!=NULL:
+5)Set TOP:=TOP+1,STACK[TOP]:=PTR.
+6)If RIGHT[PTR]!=NULL,then:
+  Set TOP:=TOP+1,STACK[TOP]:=-RIGHT[PTR].
+  [End of IF structure].
+7)Set PTR:=LEFT[PTR].
+  [End of step 4 loop].
+8)Set PTR:=STACK[TOP],TOP:=TOP-1.
+9)Repeat steps  10,11  While TOP>0:
+10)If PTR<0,then:
+   Set PTR:=-PTR, End of loop structure.
+   Else:
+   Write INFO[PTR].
+   [End of IF structure].
+11)Set PTR:=STACK[TOP],TOP:=TOP-1.
+  [End of step 9 loop].
+ [End of step 3 loop].
+12)Exit.
+
+           Node counting in binary tree:
+
+Node_Counter(PTR,LEFT,RIGHT)
+1)If PTR=NULL,then:
+  Return 0.
+  [End of If structure].
+2)Set NL:=Call Node_Counter(LEFT[PTR],LEFT,RIGHT).
+3)Set NR:=Call Node_Counter(RIGHT[PTR],LEFT,RIGHT).
+4)Return NL+NR+1.
+
+
+                OR
+Node_Counter(PTR,LEFT,RIGHT,INFO)
+1)If PTR=NULL,then:
+  Return 0.
+  Else:
+  Return 
+         Call Node_Counter(LEFT[PTR],LEFT,RIGHT)+
+         Call Node_Counter(RIGHT[PTR],LEFT,RIGHT)+1.
+  [End of If structure].
+  
+
+Height/depth finder in binary tree:
+
+Height_Finder(PTR,LEFT,RIGHT)
+1)If PTR=NULL,then:
+  Return 0.
+  [End of If structure].
+2)Set HL:=Call Height_Finder(LEFT[PTR],LEFT,RIGHT).
+3)Set HR:=Call Height_Finder(RIGHT[PTR],LEFT,RIGHT).
+4)If HL>=HR,then:
+   Return HL+1.
+  Else:
+   Return HR+1.
+  [End of If structure].
+
+
+
+
+
+
+
+               DELETION OF A NODE FROM BST:
+
+PROCESS:
+1)IF TREE IS EMPTY : UNDERFLOW.   
+2)FIRST OF ALL FIND THE NODE TO BE DELETED WHETHER IT EXIST OR NOT
+  IF NOT EXISTS THEN NODE NOT FOUND.
+3)IF NODE EXISTS THEN THERE CAN BE 4 POSSIBLE SITUATIONS:
+  
+   A)node to be deleted is leaf node.
+   b)node to be deleted is having only left branch(or left child).
+   c)node to be deleted is having only right branch(or right child).
+   d)node to be deleted is having both branches(or left and right child).
+
+
+Process to be applied for node with both child:
+  1)Find out the inorder prdecessor or inorder successor
+of node to be deleted.(it is same as smallest node or largest node at the left/right side of node to be deleted).
+
+  2)after finding inorder predecessor or successor just copy it
+at the place where PTR  is pointing .
+
+  3)node simply delete the inorder prdecessor or successor.
+  (why it is found? TO avoid shifting of entire branch)
+  this node will be either a leaf or node with 1 child.
+ 
+Delete_BST(ROOT,AVAIL,INFO,LEFT,RIGHT,ITEM        
+1)If ROOT=NULL,then:
+  Write Undeflow ,Empty Tree and Return.
+  [End of If structure].
+2)Set PAR:=NULL,PTR:=ROOT.
+3)Repeat step 4  While PTR!=NULL:
+4)If ITEM=INFO[PTR],then:
+  end of loop structure.
+  Else If ITEM>INFO[PTR],then:
+  Set PAR:=PTR,PTR:=RIGHT[PTR].
+  Else:
+  Set PAR:=PTR,PTR:=LEFT[PTR].
+  [End of If structure].
+ [End of step 3loop].
+5)If PTR=NULL,then:
+  Write NODE not found and Return. 
+  [End of If structure].
+6)If LEFT[PTR]!=NULL && RIGHT[PTR]!=NULL,then:
+  Set PRED:=LEFT[PTR],PAR:=PTR.
+  a)Repeat step 6(b) While RIGHT[PRED]!=NULL:
+  b)Set PAR:=PRED,PRED:=RIGHT[PRED].    
+  [End of step 6(a) loop].
+  c)Set INFO[PTR]:=INFO[PRED].
+   [Replacing node by inorder Predecessor].
+  d)Set PTR:=PRED.
+  [End of If structure].  
+7)Call Delete_node(PTR,PAR,ROOT,LEFT,RIGHT)
+8)Set RIGHT[PTR]:=AVAIL,AVAIL:=PTR.
+9)Exit.
+Delete_node(PTR,PAR,ROOT,LEFT,RIGHT)
+1)If LEFT[PTR]=NULL,then:
+  Set CHILD:=RIGHT[PTR].
+  Else:
+  Set CHILD:=LEFT[PTR].
+  [End of If structure].  
+2)If PAR=NULL,then:
+  Set ROOT:=CHILD.
+  Else If INFO[PTR]>INFO[PAR],then:
+  Set RIGHT[PAR]:=CHILD.
+  Else
+  Set LEFT[PAR]:=CHILD.
+  [End of If structure].  
+3)Return.   
+
+
+
+                 Heap Sort
+
+Heap is a binary tree which follows 2 properties:
+1) Shape property:
+     Elements are inserted level by level from left to right
+
+2) Order property:
+       a)MAX heap: Roots and subroots are larger than thier child
+                   nodes.
+           (Root node is the largest value node)
+
+       b)MIN heap: Roots and subroots are Smaller than thier child
+                 nodes.
+           (Root node is the smallest value node)
+
+Reheapify operation: IT is done when Heap order property is not satisfied.
+            
+creation of max heap:
+89,34,20,567,12,345,77,120,46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HEap is used to perform HEap sort on Array.
+
+ Building a heap(Creation)(Insertion in HEAP):
+process:
+      1) take nodes from an array 1 by 1.
+      2)first element of array will become root node intially.
+      3)now after insertion first insert left child whose index
+        will be 2*I  and than insert right child whose index will
+        be 2*I+1.
+      4)During insertion we have to satisfy the order property
+      so if order property is voilated than perform the
+       reheapify operation till the root node.
+
+Node: Index of parent node = index/2
+
+Create max heap:
+      100,34,899,90,1000,345,678,198
+
+Create min heap:
+Insert_MAXHeap(HEAP,INDEX)
+1)Set ITEM:=HEAP[INDEX].
+2)Repeat steps  3,4    While INDEX>1 && HEAP[INDEX/2]>ITEM:
+3)Set HEAP[INDEX]:=HEAP[INDEX/2].
+4)Set INDEX:=INDEX/2.
+  [End of step 2 loop].
+5)HEAP[INDEX]:=ITEM.
+6)Return.
+
+Note: for min heap just write HEAP[INDEX/2]<ITEM IN STEP2
+
+           
+
+
+
+
+
+
+
+
+ Deletion from HEAP(MIN/MAX)
+process:
+ 1)First element is deleted from min/max heap always.
+ (actually it is swapped with last element of heap array and
+size of heap array is reduced by 1)
+ 
+ 2)after reducing the size again heap is rebuild so that
+it will remain min or max heap.
+  (Reheapify operation is peformed downward side)
+
+steps:
+  
+      1)first of all swap heap[1] by heap[n]
+         and n--.(ITEM:=HEAP[1])
+      2)take a variable PTR WHICH will be intially on first left
+      child i.e. at index 2 only
+         
+      3)Now Repeat the steps written below till PTR<=N
+        a)Is there right child exists (PTR+1 WILL BE RIGHT CHILD)
+           (PTR+1<=N must be true)
+           is right child smaller than left child than
+          MOVE TO RIGHT CHILD  PTR=PTR+1 
+        b) Is element at INDEX PTR IS SMALLER THAN ITEM THEN
+            MOVE ELEMENT AT PTR AT ITS PARENT
+             HEAP[PTR/2]:=HEAP[PTR]
+           AND IF IT IS LARGER THAN STOP THE LOOP.
+        c) now move PTR TO NEXT LEFT CHILD
+             PTR=PTR*2
+
+
+Delete_Heap(HEAP,N)
+1)Set T:=HEAP[1],HEAP[1]:=HEAP[N],HEAP[N]:=T.
+2)Set ITEM:=HEAP[1],N:=N-1,Set PTR:=2.
+3)Repeat steps 4,5,6   While PTR<=N:
+4)If PTR+1<=N && HEAP[PTR]<HEAP[PTR+1],then:
+  Set PTR:=PTR+1.
+  [End of If structure].
+5)If HEAP[PTR]<=ITEM,then:
+  end of loop structure.
+  Else:
+  Set HEAP[PTR/2]:=HEAP[PTR].
+  [End of If structure].
+6)Set PTR:=PTR*2.
+ [End of step 3 loop].
+7)Set HEAP[PTR/2]:=ITEM.
+ [Inserting the item at parent position].
+8)Return.
+  
+              
+Heap_Sort(HEAP,N)
+1)Set I:=1.
+2)Repeat steps 3,4 While I<=N:
+3)Call Insert_MAXHeap(HEAP,I).
+4)Set I:=I+1.
+  [End of step 2 loop].
+5)Set I:=1.
+6)Repeat step 7  While I<N:
+7)Call Delete_Heap(HEAP,N).
+  [End of step 6 loop].
+8)Exit.  
+  
+
+AVL(Adelson-Velskii and Landis) TREE:
+           -It is actually a  Balanced BST
+             with balanced height.
+           -Insertion and deletion operations are same
+            as BST.
+     
+Problem with BST:
+            BST suffers problem of imbalanced height due to which
+time becomes O(N) instead of O(Log N)
+
+  a)Left skewed BST: 
+            if all nodes are given in decreasing order
+      
+  b)Right skewed BST: 
+            if all nodes are given in increasing order
+   
+
+AVL tree makes the tree balanced by maintaing a special property
+known as balanced factor for every node.
+balance factor=height of Left subtree - Height of right subtree
+ITs value can only be -1,0,1  if it is not in this range then
+the tree is said to be unbalanced.
+
+So if balance factor goes out of range than certain rotations are
+performed to balance the tree.
+
+
+Rotations: 
+1)Single rotation:  in LL and RR case
+
+2)Double rotation:  in LR and RL case
+
+Construct an AVL tree by inserting the following elements in the given order.
+
+          63, 9, 19, 27, 18, 108, 99, 81.
+
+
+Create an AVL tree using the following sequence
+of data: 
+
+         16, 27, 9, 11, 36, 54, 81, 63, 72.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  Threaded Binary Tree:
+
+In a Binary tree Most of the nodes (including leaf) usually stores
+NULL in their left and right links that is simply a wastage.
+Threaded binary tree makes use of those nodes which contains
+NULL in their left/right links to point their inorder prdecessor
+or inorder successor or both. So Such node which stores the address of  inorder prdecessor or inorder successor or both are known as Thread and such a tree is known as Threaded Binary Tree.
+
+Application:
+
+By using Threaded binary tree we can traverse a tree without using stack.
+
+Types:
+a)1-way Left/Right threaded
+b)2-way threaded 
+
+Note: If left link is null than we can use it to point the address
+of inorder predecessor.
+
+If right link is null than we can use it to point the address
+of inorder successor.
+
+
+90,34,56,899,12,399,45,678,234
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100,50,500,20,120,700,10,30,110,800,750,900
+
+ 
+
+                    GRAPH and its applications
+
+- Non Linear Data structure
+
+- It is non linear collection of nodes (that contains data/record/values) in any order unlike tree(which follows parent
+child relationship) 
+So in a graph nodes can be connected to anyother node in any order
+
+-Every tree is a graph but not all graph are trees
+
+- A Graph(G) is a collection of vertices(V) and Edges (E)
+  where edge is formed by joining 2 vertices together.
+
+Applications:
+1) It is used in minimum Distance/route finding algorithms between
+cities/highways . (Like used by Google maps)
+
+2) It is used in Routing algorihtms in networking.
+   (like to create an optimal network, to find routes between 2 workstations, 2 transfer the files over a network by best possible route with less traffic)
+
+3) It is used to create Flight simulation network at ATC(Airline
+traffic control at airports)
+
+4) It is used to connect the components of printed circuit boards
+   (PCB i.e motherboard of computer/mobile or other integrated circuits)
+
+5) It is used to create internal structure of chemical compounds.
+
+6) It is used to find routes in maze running games 
+(such as pacman or snakes) 
+
+7) It is used by all INTEGRATED DEVELOPMENT ENVIORNMENTS(IDE) FOR running the applications.
+   (is known as TOPOLOGICAL SORTING).
+
+
+
+
+
+
+
+
+
+
+Terminologies used:
+
+1)Vertex-  It is a node in a graph that stores actual information
+   (record/value)
+
+2)Edge -  It is link between 2 vertices (nodes)
+          (connecting line between 2 vertices)
+
+3)Directed Graph:
+     - A graph with directed edges is known as directed graph.
+     
+4)Undirected Graph:
+     - A graph without directed edges is known as Undirected graph.
+      
+5)Indegree of node(vertex):
+     - No. of edges coming towards a node(vertex) is known as        indegree  (Directed graph)
+
+   vertex  indegree
+    v1      1  
+    v2      2
+    v3      1
+    v4      1
+
+6) Outdegree of a node(vertex)
+  - No. of edges leaving  from  a node(vertex) is known as            outdegree  (Directed graph)
+
+   vertex  outdegree
+    v1      2  
+    v2      0  
+    v3      1 
+    v4      2
+
+7) Degree of node (vertex) (Undirected)
+   
+  - No. of edges which connects a vertex with other vertices 
+   is known as degree of a vertex.
+
+   vertex  Indegree  Outdegree    degree  
+    v1        3          3          3
+    v2        2          2          2
+    v3        2          2          2
+    v4        3          3          3
+   
+8)Parallel edges:
+     2 or more edges with same end points (source,destination)
+
+  (if there are more than 1  direct edge between 2 vertices)
+
+  There can be any no. of parallel edges in a graph
+
+   e1 and e6 are parallel edges
+  
+ e1: (v1,v2)        means edge towards v2 from v1
+ e6: (v1,v2)             
+
+9) self loops :
+       It is an edge with identical end points (source and destination are same)
+
+      e6:  (v1,v1)
+      e7:  (v2,v2)
+
+  Note: every self loop will have 1 indegree and 1 outdegree.
+
+10)Path:
+       It a way(ordered traversal of vertices) to reach destination node from source node.
+
+path between source node A and destination node E:
+
+       A->D->E
+
+11)weighted graph: A graph in which weight(cost/distance) is assigned on every edge
+is known as weighted graph.
+
+
+Representation/Creation of Graph:
+
+  - A graph can be created in memory by using 2-d array and link lists.     
+  
+1)Using 2-d Array(Adjacency Matrix)
+   - It is a V*V square matrix  
+   - It stores 2 type of values 1 and 0
+   - Rows represent source vertex
+     column represent destination vertex
+     Cross join of row with column will tell that
+     there is an edge or not.
+
+   ADJ is the name of Adjacency matrix 
+        e.g.     int ADJ[V][V];
+
+  ADJ[I][J] will store 1 if there is an edge between Ith  vertex
+            to Jth vertex
+ else ADJ[I][J] will store 0
+ 
+ I = source vertex no.
+ J = column vertex no.  
+
+2) Using link list(Adjacency list)
+     It consists of 2 types of list: 
+       a)vertex list: A link list which contains list of all
+                      vertices
+       b)edge list: A link list which stores the nodes(vertices)
+                  adjacent to a vertex.
+
+
+
+Degree_Finder(START,INFO,LINK,NEXT,IN,OUT)
+1)Set PTR1:=START.
+2)Repeat steps 3 to 8  While PTR1!=NULL:
+3)Set PTR2:=LINK[PTR1].
+4)Repeat steps 5,6,7  While PTR2!=NULL:
+5)Set IN[INFO[PTR2]]:=IN[INFO[PTR2]]+1.
+6)Set OUT[INFO[PTR1]]:=OUT[INFO[PTR1]]+1.
+7)Set PTR2:=LINK[PTR2].
+  [End of step 4 loop].
+8)Set PTR1:=NEXT[PTR1].
+  [End of step 2 loop].
+9)Exit.
+
+
+To find source node in the vertex list NEXT FIELD IS USED.
+    PTR1:=NEXT[PTR1].
+TO FIND THE DESTINATION(ADJACENT) NODES FOR ANY SOURCE AT PTR1
+   PTR2 IS USED.
+ INTIALY PTR2:=LINK[PTR1]  AT FIRST ADJACENT NODE
+   THEN IT WILL MOVE TO NEXT ADJACENT BY UPDATING IT
+    PTR2:=LINK[PTR2]     
+
+Graph Traversal:  
+       Graph traversal doesn't means that simply print all the
+vertices or adjacent vertices of nodes.
+      Graph traversal is used in searching the path,
+      a node in the path, finding minimum path, finding 
+      connected components b/w 2 vertices, finding reachability
+      of other nodes from a given vertex.
+  
+     It is used in all types of route finding algo if it is assumed that unit distance is given b/w source and destination
+   
+Types:
+  1)BFS - Breadth First Search 
+          - level by level searching
+          - Queue Data structure is used.
+ 
+  2)DFS - Depth First Search
+
+          - depth by depth searching    
+          - Stack is used.
+
+
+In Graph Traversal 2 problem comes:
+  1) Infinite loop may come:
+      A vertex must not be processed more than once.
+    so for this we can take array of visited vertices which stores
+    status of visited or unvisited.
+   During insertion of any vertex for its processing we must
+check its visited status first.if it is already visited than just skip it.
+
+   2) A graph may not be fully connected.
+    Enclose the traversal mechanism inside an infinite loop.
+   and if traversal stops before traversing all nodes than 
+   we can start process again from next unvisited node.
+
+
+
+
+
+
+   
+BFS process: (path finding between 2 nodes)
+    1) insert source node into queue 
+      and change its status as visited.
+    2) Now continue traversing adjacent nodes till queue is not
+         empty or destination is not found:
+       a)Insert the adjacent nodes of the node at front of queue
+         and change their status as visited if not visited.
+       b)now process the front node and increase front by 1.
+         
+
+
+
+
+
+
+
+
+
+
+In algo 3 types of status are stored about a vertex:
+   1) status 1- shows nodes are in ready state(unvisited)
+   2) status 2- shows nodes are waiting inside queue(waiting                                           state)  
+   3) status 3- shows nodes are in processed state
+                                      (visited )
+
+ 
+DFS process:
+    1) insert source node into stack 
+      and change its status as visited.
+    2) Now continue traversing adjacent nodes till stack is not
+         empty or destination is not found:
+       a)Insert the adjacent nodes of the node at top of stack
+         and change their status as visited if not visited.
+       b)now process the top node and increase top by 1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Minimum path finding algo in graph:
+  1) min path between all nodes to all other nodes:
+Warshall algorithm:     
+   Process:
+         1)We will be provided with a weighted graph.
+      (weighted graph is a graph in which each edge is having
+       a cost assigned which is cost of traversing from source
+       to destination)
+  2)  There are 2 type of path between a source to destination        node.
+      a)One is direct path between source and destination
+      b)second is path containing intermediate nodes between
+        source and destination.
+       so this algo chooses the min between above 2 
+      
+   3)Intial adjacency matrix will store the cost instead of 1
+     whenever there is an outward edge from source to destination
+
+   4)First of all a matrix known as cost matrix will be constructed from intial adjacency matrix
+    Q0    will store the direct cost edges
+5 vertices are there (v1 to v5)
+   a)now Q1 will be constructed in which path will be found which contains V1 as intermediate vertex
+   b)now Q2 will be constructed in which path will be found which contains V2 as intermediate vertex
+   c)now Q3 will be constructed in which path will be found which contains V3 as intermediate vertex
+   d)now Q4 will be constructed in which path will be found which contains V4 as intermediate vertex
+   e)now Q5 will be constructed in which path will be found which contains V5 as intermediate vertex
+
+
+graph traversal:
+
+
+Breadth-first search (BFS) is a graph search algorithm that begins at the root(SOURCE) node and explores all
+the neighbouring nodes. Then for each of those nearest nodes, the algorithm  explores
+their unexplored neighbour nodes, and so on, until it finds the goal.
+That is, we start examining the node A and then all the
+neighbours of A are examined. In the next step, we examine
+the neighbours of neighbours of A, so on and so forth.
+
+Algorithm 9.2 BFS
+This algorithm executes a breadth-first search on a graph G containing N nodes beginning at a starting node A.
+1.Initialize all nodes to the ready state (STATUS = 1).
+2.Push the starting node A onto QUEUE and change its status to the 
+waiting state (STATUS = 2).
+3.Repeat steps 4 and 5 until QUEUE is empty:
+4.Remove the front node N of QUEUE. Process N and change its status to the processed state (STAtus = 3).
+5. Add to the rear of QUEUE all the neighbors of N that are still in the ready state (STATUS = 1), and change their status to the waiting state (STATUS = 2).
+	[End of Step 3 loop.]
+6.	Exit.
+
+
+
+
+
+
+
+
+
+Applications of Breadth-First Search Algorithm
+Breadth-first search can be used to solve many problems such as:
+1 Finding all connected components in a graph G.
+2 Finding all nodes within an individual connected component.
+
+
+Depth-first Search Algorithm
+The depth-first search algorithm (Fig. 13.22) progresses by expanding the starting node of G and
+then going deeper and deeper until the goal node is found, or until a node that has no children is
+encountered. When a dead-end is reached, the algorithm backtracks, returning to the most recent
+node that has not been completely explored.
+
+Algorithm 9.1 DFS
+This algorithm executes a depth-first 
+search on a graph G containing N nodes 
+beginning at a starting node A. 
+
+1.Initialize all nodes to the ready state 
+(STATUS = 1).
+2.Push the starting node A onto STACK and 
+change its status to the waiting state 
+(STATUS = 2).
+3.Repeat steps 4 and 5 until STACK is empty:
+4.Pop the top node N of STACK. 
+Process N and change its status to the 
+processed state (STATUS = 3).
+5.Push onto STACK all the neighbors of N 
+that are still in the ready state 
+(STATUS = 1), and change their status to 
+the waiting state (STATUS = 2).
+[End of Step 3 loop.]
+6.Exit
+
+
+Applications of Depth-First Search Algorithm
+Depth-first search is useful for:
+
+1) Finding a path between two specified nodes, u and v, of an unweighted graph.
+2) Finding whether a graph is connected or not.
+
+
+
+TOPOLOGICAL SORTING
+Topological sort of a directed acyclic graph (DAG) G is defined as a linear ordering of its nodes
+in which each node comes before all nodes to which it has outbound edges.
+
+1.Find the indegree INDEG(N) of each node N
+of S. 
+(This can be done by traversing each 
+adjacency list).
+2.Put in a queue all the nodes with zero 
+indegree.
+3.Repeat steps 4 and 5 until the queue is 
+empty:
+4.Remove the front node N of the queue 
+(by setting FRONT:=FRONT + 1).
+5.Repeat the following for each neighbor M 
+of the node N:
+(a)Set INDEG(M):=INDEG(M) – 1. 
+[This deletes the edge from N to M.]
+(b)If INDEG(M)= 0, then: Add M to the 
+rear of the queue.
+[End of loop.]
+[End of Step 3 loop.]
+6.Exit
+             Note: To implement Topological sorting Graph must not contain cycles(closed path).
+
+Applications:
+   1)Used by every IDE for building a project where
+   which  modules are build first which will build next will
+   be found by topological sorting.
+   
+   2)Used in airline networks for connecting flights startup.
+
+
+
+
+Warshall’s Algorithm to find the shortest Path matrix.
+
+A weighted graph G with M nodes is maintained in memory by its adjacency matrix W. This algorithm finds a matrix Q such that Q[I,J] is the length of a shortest path INFINITY is a very large number, and MIN is the minimum value function.
+1. [Initialize Q.]
+   Repeat steps for I:= 1 to M:
+   Repeat steps for J:= 1 to M:
+   If W[I][J] = 0, then: 
+    Set Q[I][J]:= INFINITY.
+   Else:
+    Set Q[I][J]:= W[I][J].
+   [End of If structure.]
+   [End of J loop.]
+   [End of I loop.]
+2.[Updates Q.]
+Repeat steps for k:= 1 to M:
+Repeat steps for I:= 1 to M:
+Repeat steps for J:= 1 to M:
+    Set Q[I][J]:= MIN(Q[I][J] , Q[I][K] + Q[K][J]).
+[End of J loop.]
+[End of I loop.]
+[End of K loop.]
+3.Exit
+
+
+Dijkstra’s Algorithm
+Dijkstra’s algorithm, given by a Dutch scientist Edsger Dijkstra in 1959, is used to find the shortest path. This algorithm is widely used in network routing protocols.
+
+Given a graph G and a source node A, the algorithm is used to find the shortest path (one having the lowest cost) between A (source node) and every other node.
+
+1. Select the source node also called the initial node
+2. Define an empty set N that will be used to hold nodes to which a shortest path has been found.
+3. Label the initial node with 0, and insert it into N.
+4. Repeat Steps 5 to 7 until the destination node is in N or there are no more labelled nodes in N.
+5. Consider each node that is not in N and is connected by an edge from the newly inserted node.
+6. (a) If the node that is not in N has no label then SET the label of the node = the label of the newly inserted node + the length of the edge.
+(b) Else if the node that is not in N was already labelled, then SET its new label = minimum (label of newly inserted vertex + length of edge, old label)
+7. Pick a node not in N that has the smallest label assigned to it and add it to N.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Minimum Spanning Trees(MST)
+
+A spanning tree of a connected, undirected graph G is a sub-graph of G which is a tree that connects all the vertices together. 
+A graph G can have many different spanning trees. We can assign weights to each edge (which is a number that represents how unfavourable the edge is), and use it to assign
+a weight to a spanning tree by calculating the sum of the weights of the edges in that spanning tree. 
+
+A minimum spanning tree (MST) is defined as a spanning tree with weight less than or equal to the weight of every other spanning tree. In other words, a minimum spanning tree is a spanning
+tree that has weights associated with its edges, and the total weight of the tree (the sum of the weights of its edges) is at a minimum.
+ 
+
+Kruskal's algo for min spanning tree.
+1)Arrange all the edges in ascending order of their weight.
+2) Choose an edge of minimal weight(If there is more than one edge of minimal weight than
+arbitrary choose one of the edges).
+3) At each stage, choose from the edges not yet chosen the edge of smallest weight whose inclusion
+will not create a cycle.
+4)If G has n vertices , stop after n-1 edges have been chosen. other wise repeat step2.
+
+
+
+
+
+
+
+  
+
+Prim's algo for min spanning tree.
+
+1)Select any vertex  and choose the edge with smallest weight from G.
+2)At each stage, choose the edge of smallest weight joining a vertex already included to vertex 
+which is not yet included whose inclusion doesnt cause cycle.
+3)continue untill all vertices are not included.
+
+
+Application of MST:
+         1)It is used to connect highways,cities,roads
+           optimally so that intermediate connections are 
+           there which gives least cost paths to connect
+           the cities,roads and highways.
+
+         2)TO construct a optimal cable TV network where the  restriction is applied that each house must take the cable from restricted nodes to decrease the cable cost.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hashing:
+      It is a fastest process of searching an item.
+    -There are 3 types of searching available.
+        1)Linear search in Array and link list
+                    takes O(N) time
+        2)Binary search in Array 
+                    takes O(Log N) time
+        3)Binary search tree  
+                    takes O(Log N) time
+        4)Hashing which takes O(1) time ideally but practically
+                    Near to O(1).
+
+Direct Addressing in Array which can give O(1) time 
+for searching an element:
+
+       suppose there are N items to be stored in an Array
+       and we have N size array also.
+       if we have can bind each item to be stored with index no.
+       of array then for seaching an item time will be 
+       O(1).
+          items are 1 t0 100   THEN WE NEED ARRAY OF 100 SIZE
+ 
+ so 1 will be stored at A[0]
+    2 will be stored at A[1]
+     --------------------
+    100 will be stored at A[99]
+
+so we are suppose storing employee id no. in array and there
+are 100 employees to be stored so one solution is to keep id no.
+equals to array index no.
+
+    now say if we search 88 is present/stored or not.
+    now we can directly write
+             88==A[87]  if exists then found and no need of
+    loop is there.
+
+but if suppose employee no. are in the range of
+     88888  to 99999   total employees (11112)  
+   so now we must create 100000 size array .
+       - memory will be always wasted.
+     os will not permit any application to create such array
+
+ 32767  in C max size of int type array.  65534 bytes allowed.
+  -if we create such array and elements are always less
+   memory will not be used effectively.
+
+Hash table: It is used to create the mapping index no. for such
+large values inside an array with their key values stored.
+
+Hash function: H(K) here K is the key value to be stored in array
+              no instead of storing value directly to kth index
+     we will find index no.by  hash function H(k).
+     and the key value will be stored at that index no.
+
+methods:
+    1)Division method:
+                  H(K)= K MOD M
+         M is the size of hash table (array)
+e.g.
+         suppose arr is size 10 array:
+       M=10
+
+values are      456 , 234 ,756 , 345 ,595
+
+   k=456     h(k)=456 % 10  =  6  and this index no is free
+   k=234     h(k)=234 % 10  =  4  and this location is free
+   k=756     h(k)=756 % 10  =  6  it collides with already stored
+                                  element
+   k=345     h(k)=345%10= 5  and this location is free
+   k=595     h(k)=595%10=5   it collides with already stored                           element        
+  
+   problem with division method:
+     it only uses the last digits of an element which gives
+  frequent same indices for elements storage.
+   
+   2)Mid square method:
+          In this method index is generate by squaring the keyvalue to be stored and then taking its r-digits from middle and
+there element will be stored actually.
+
+  here if array store 100 elements than indexing will be 0 to 99
+  elements only middle 2(r) digits will be taken.
+
+  here if array store 1000 elements than indexing will be 0 to 999
+  elements only middle 3(r) digits will be taken.
+     
+e.g.    suppose array stores 100 elements at a time
+  store the values  456,234,789,667
+middle digits starts from right  (3rd and 4th digit)  
+    k     square of k      middle digits
+   456      207936             79
+   234      054756             47
+   789      622521             25         
+   667      444889             48
+
+  so 456 will be stored at  A[79]
+  so 234 will be stored at  A[47]
+  so 789 will be stored at  A[25]
+  so 667 will be stored at  A[48]
+
+   3)Folding method:
+            1)in this method a number to be stored is divided into
+ several parts of equal size but last part can have less elements
+            2)then all parts are added together and last carry
+             is discarded and index no. is generated to store the
+              actual element.
+
+  1) if array stores total 100 elements than we can index 
+  between 0 to 99 to we will divide the number in 2-2 pair 
+  2) if array stores total 1000 elements than we can index 
+  between 0 to 999 to we will divide the number in 3-3 pair 
+        
+ e.g.     
+     array is having 1000 elements storage:
+  store 234567,589646,23456,898567,345902
+
+1) 234567=     234,567    = 234+567  =  801 final index
+2) 589646=     589,646    = 589+646  =  1235 = discard last carry
+                                         235 will be final index
+4) 23456 =  234,56 = 234+56 =   290 will be final index
+5) 898567= 898,567 = 898+567=  1465 =discard last carry
+                                   =465 will be final index
+6) 345902 = 345,902= 345+902=   1257 = discard last carry 
+                                     = 257 will be final index
+
+a)used by every database system while records storage and searching  so records are stored according to thier index number not by thier value no.
+ 
+Problem of  Collision while storage:
+   Collision occurs when 2 or more elements to be stored
+   are having same index no. after calculating from hash function
+   H(k) then we cant store directly these elements into array.
+   Ideally we cant remove collision but we can minimize it.
+
+1)By simple/synonyms chaining:
+      -Intially array is filled with some sentinel value which indicates nothing is stored in specified slot(index).
+      - now index number is calculated by hash function
+      - if index no. is free than store the element directly
+        otherwise a link list is created from that index and
+        the new element will always inserted in the begining.
+            
+      - extra space is needed to store address part of link list
+
+
+2) By open addressing:   
+  -In this process all elements are stored inside array itself
+   no link list and extra space is required.
+  -In open addressing first of all element to be stored /searched
+   index no. is generated from division method and then
+  -If index no. if free then element will be stored directly
+   otherwise it will be stored in next free slot
+   the process of finding next free slot is known as probing.
+   if next free slot is available then element is stored there
+   otherwise condition of overflow is generated.   
+      
+ methods: 
+1)Linear probing:
+       H(K,I)  =  (H1(K)+I) MOD M
+
+  -HERE M IS THE SIZE OF HASH TABLE 
+  - K IS THE KEY VALUE
+  - I IS THE SLOT NO.   IT CAN BE BETWEEN 0 TO M-1
+  -H1(K)= K MOD M
+let there are 11 ELEMENTS ARE TO BE STORED: 
+    123,456,673,783,458
+1)H(123,0)= (123%11+0)%11
+          =  2%11=2       STORE AT A[2]
+2)H(456,0)= (456%11+0)%11
+          = (5%11+0)%11       
+          =  5            STORED AT A[5]
+3)H(673,0)= (673%11+0)%11
+          =  2    NOW SINCE 2 IS ALREADY FILLED COLLISION OCCURS
+
+  H(673,1)= (673%11+1)%11
+               (2+1%11)  GIVES 3 NOW STORED AT A[3]
+
+4)H(783,0)=(783%11+0)%11
+          = 2    NOW SINCE 2 IS ALREADY FILLED COLLISION OCCURS
+         
+  H(783,1)=(783%11+1)%11
+          =3     AGAIN COLLISION
+  H(783,2)=(783%11+2)%11
+         = 4 NOW WILL BE STORED AT 4th INDEX
+
+5)H(458,0)=(458%11+0)%11
+          =7  will be stored at 7
+
+Linear probing is easiest method of storing and finding
+but it suffers a problem of clustering.
+ Clustering means whenever a slot is not free then element
+is stored at the index of space between filled elements
+which makes long linear chains   
+
+  To avoid this problem we can
+   use THEY WILL UNIFORMLY DISTRIBUTE THE ELEMENTS
+   a)Quadratic probing
+       H(K,I)=(H1(K)+c1*I+C2*I*I) MOD M 
+       IS USED TO FIND THE NEXT SLOT IF COLLISION OCCURS
+      HERE C1 AND C2 ARE 2 CONSTANTS WHICH ARE NON ZERO
+      WE CAN LET THEM AS C1=1 C2=3
+                         C1=3 C2=5   
+     
+    H1(K)= K MOD M
+   
+   b)double hashing:
+       IN THIS METHOD VERY VERY LESS COLLISION IS PRODUCED
+        
+   H(K)=(H1(K)+H2(K))MOD M
+
+   H1(K)= K MOD M
+   H2(K)= K MOD N    (HERE N CAN BE M-1,M-2,M-3,M-4.....)
+      
+2 TIMES HASHING IS DONE TO STORE THE ELEMENT IN THE HASH TABLE.   
+                     
+  
+            
+
+
+
+Radix(Bucket) sort:
+   here radix means base of a number.
+
+Suppose numbers are decimal no. (Base 10) digits (0-9) 
+ 
+  - we will need 10 buckets(array) one for each digit
+ 
+Suppose numbers are octal no. (Base 8) digits (0-7) 
+ 
+  - we will need 8 buckets(array) one for each digit
+
+Suppose alphabets (26)  
+ 
+  - we will need 26 buckets(array) one for each alphabet
+
+Process:
+    - First of all we will find the maximum number which will 
+      tell how many passes will be there.
+
+    - pass-1 
+          In first pass elements of array are sorted according to
+          last digit. and stored in specified bucket number            according to last digit
+   then elements are fetched from bucket and stored in array 
+     -pass-2 
+          In second pass elements of array are sorted according to
+         second last digit. and stored in specified bucket number           according to last digit
+        
+   then elements are fetched from bucket and stored in array 
+ 
+    - pass-n
+          In nth pass elements of array are sorted according to
+         second first digit. and stored in specified bucket number           according to last digit
+        
+   then elements are fetched from bucket and stored in array 
+max=220
+total digits=3
+ total passes=3
+
+pass-1 (find last digit)
+  1)220 
+       last digit=0 so store in bucket 0
+  2)115 
+       last digit=5 so store in bucket 5
+  3)15 
+       last digit=5 so store in bucket 5
+  4)70 
+       last digit=0 so store in bucket 0
+  5)161 
+       last digit=1 so store in bucket 1
+  6)71 
+       last digit=1 so store in bucket 1
+  7)130 
+       last digit=0 so store in bucket 0
+
+  220,70,130,161,71,115,15
+
+pass-2 (find second last digit)
+ 
+ 1)220   bucketno.=2
+ 2)70    bucketno.=7
+ 3)130   bucketno.=3
+ 4)161   bucketno.=6
+ 5)71    bucketno.=7
+ 6)115   bucketno.=1
+ 7)15    bucketno.=1
+
+115,15,220,130,161,70,71
+
+pass-3 (find first digit)
+
+  1)115  bucketno.=1
+  2)15   bucketno.=0
+  3)220  bucketno.=2
+  4)130  bucketno.=1
+  5)161  bucketno.=1
+  6)70   bucketno.=0
+  7)71   bucketno.=0
+
+15,70,71,115,130,161,220
+
+Transitive closure and orthogonal representation of graph
+
+
+
+  
+             
+
+
+        
+    
+ 
+           
+    
+
+
+
+
+
+
+
+
+              
+              
+
+
+  
+          
+            
+                    
+
+                 
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+  
+
+
+
+    
+
+
+
+
+
+         
+       
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+               
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+   
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

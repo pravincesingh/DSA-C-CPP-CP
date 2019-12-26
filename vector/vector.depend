@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1541216193 source:c:\users\hp\desktop\code block all programme\vector\main.cpp
+	<iostream>
+	<vector>
+
+1541216637 source:c:\users\hp\desktop\code block all programme\vector.cpp
+	<iostream>
+	<vector>
+
